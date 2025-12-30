@@ -1,0 +1,23 @@
+CREATE TABLE member_eligibility_unified (
+  member_id_canonical      TEXT NOT NULL,
+  family_id                TEXT NOT NULL,
+  relationship             TEXT NOT NULL,
+  first_name               TEXT NOT NULL,
+  last_name                TEXT NOT NULL,
+  dob                      DATE NOT NULL,
+  address_line1            TEXT,
+  city                     TEXT,
+  state                    TEXT,
+  zip                      TEXT,
+  medical_provider         TEXT,
+  medical_plan_id          TEXT,
+  medical_plan_tier        TEXT,
+  dental_provider          TEXT,
+  dental_plan_id           TEXT,
+  dental_plan_tier         TEXT,
+  vision_provider          TEXT,
+  vision_plan_id           TEXT,
+  vision_plan_tier         TEXT,
+  source_lineage           TEXT,
+  load_run_id              TEXT
+);

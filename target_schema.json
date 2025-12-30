@@ -1,0 +1,128 @@
+{
+  "title": "member_eligibility_unified",
+  "type": "object",
+  "required": [
+    "member_id_canonical",
+    "family_id",
+    "relationship",
+    "first_name",
+    "last_name",
+    "dob"
+  ],
+  "properties": {
+    "member_id_canonical": {
+      "type": "string"
+    },
+    "family_id": {
+      "type": "string"
+    },
+    "relationship": {
+      "type": "string",
+      "enum": [
+        "employee",
+        "spouse",
+        "dependent"
+      ]
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "string",
+      "description": "ISO date YYYY-MM-DD"
+    },
+    "address_line1": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "city": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "zip": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "medical_provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "medical_plan_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "medical_plan_tier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dental_provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dental_plan_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dental_plan_tier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vision_provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vision_plan_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vision_plan_tier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_lineage": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "load_run_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}
