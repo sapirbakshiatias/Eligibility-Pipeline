@@ -1,0 +1,32 @@
+source_vendor: medical_a
+file: medical_provider_a.csv
+format: csv
+
+constants:
+  source_vendor: medical_a
+  plan_type: medical
+  provider: medical_a
+
+mapping:
+  subscriber_id_raw: subscriber_id
+  dependent_seq_raw: dependent_seq
+  person_id_raw: member_id
+  first_name_raw: first_nm
+  last_name_raw: last_nm
+  dob_raw: dob
+  relationship_raw: relationship_cd
+  address_line1: addr_line1
+  city: city
+  state: state
+  zip: zip_cd
+  plan_id: medical_plan_code
+  plan_tier: plan_tier
+  is_active_raw: eligibility_status
+
+nulls:
+  group_id_raw: null
+  ssn_hash_raw: null
+
+extra_payload:
+  - internal_batch_id
+  - internal_row_checksum

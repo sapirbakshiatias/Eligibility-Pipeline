@@ -1,0 +1,11 @@
+# IDE
+.idea/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Run artifacts
+output/
+tests/output/
+*.db

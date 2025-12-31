@@ -1,0 +1,33 @@
+source_vendor: medical_b
+file: medical_provider_b.txt
+format: pipe_delimited
+delimiter: "|"
+
+constants:
+  source_vendor: medical_b
+  plan_type: medical
+  provider: medical_b
+
+mapping:
+  group_id_raw: family_group
+  person_id_raw: vendor_member_key
+  ssn_hash_raw: ssn_hash
+  first_name_raw: given_name
+  last_name_raw: surname
+  dob_raw: birth_dt
+  relationship_raw: relation
+  address_line1: street
+  city: town
+  state: province
+  zip: postal
+  plan_id: med_plan
+  plan_tier: tier
+  is_active_raw: active_flag
+
+nulls:
+  subscriber_id_raw: null
+  dependent_seq_raw: null
+
+extra_payload:
+  - audit_source_system
+  - audit_load_ts

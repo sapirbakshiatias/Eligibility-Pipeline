@@ -1,0 +1,812 @@
+acct,sub_id,member_no,fname,lname,dob,addr,cty,st,zip,rel,vision_plan,vision_tier,eligible_ind,internal_debug
+FAM1001,SUB1001,V-E1001,yasmin,kaplan,04-Dec-1963,15 Herzl St,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1001,SUB1001,V-S1001,matan,kaplan,19-Feb-1989,15 Herzl St,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1001,SUB1001,V-D1001-01,nina,kaplan,03-Jan-2008,15 Herzl St,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1001,SUB1001,V-D1001-02,omar,kaplan,20-Sep-2011,15 Herzl St,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1002,SUB1002,V-E1002,tomer,weiss,15-Apr-1981,72 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1002,SUB1002,V-S1002,yoni,weiss,23-Mar-1955,72 Ben Yehuda,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1002,SUB1002,V-D1002-01,nina,weiss,05-May-2013,72 Ben Yehuda,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1003,SUB1003,V-E1003,leah,haddad,20-Jun-1977,98 Allenby,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1003,SUB1003,V-S1003,noa,haddad,18-Aug-2001,98 Allenby,Jerusalem,JM,9100002,S,VISION_B,premium,N,ignore_me
+FAM1004,SUB1004,V-E1004,sarah,hazan,19-Jun-1994,49 Jaffa Rd,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1004,SUB1004,V-S1004,liam,hazan,08-Nov-1957,49 Jaffa Rd,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1005,SUB1005,V-E1005,leah,baron,27-Nov-1984,11 Ben Yehuda,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1005,SUB1005,V-S1005,dan,baron,22-Apr-1977,11 Ben Yehuda,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1005,SUB1005,V-D1005-01,adam,baron,21-Oct-2009,11 Ben Yehuda,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1005,SUB1005,V-D1005-02,zoe,baron,08-Dec-2016,11 Ben Yehuda,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1005,SUB1005,V-D1005-03,zoe,baron,09-Jul-2015,11 Ben Yehuda,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1006,SUB1006,V-E1006,eli,levi,26-Jan-1969,89 Ibn Gabirol,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1006,SUB1006,V-S1006,adam,levi,19-Apr-1959,89 Ibn Gabirol,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1006,SUB1006,V-D1006-01,matan,levi,21-Apr-2013,89 Ibn Gabirol,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1006,SUB1006,V-D1006-02,yael,levi,15-Nov-2014,89 Ibn Gabirol,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1007,SUB1007,V-E1007,ron,weiss,19-Dec-1971,34 Dizengoff,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1007,SUB1007,V-S1007,nadav,weiss,08-Jun-1980,34 Dizengoff,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1008,SUB1008,V-E1008,noa,haddad,06-Nov-1964,66 Rothschild,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1009,SUB1009,V-E1009,shira,ben-david,18-May-1988,77 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1009,SUB1009,V-D1009-01,ava,ben-david,18-Nov-2009,77 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1010,SUB1010,V-E1010,nina,mizrahi,24-Jan-1984,99 Allenby,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1010,SUB1010,V-D1010-01,adam,mizrahi,17-Mar-2016,99 Allenby,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1011,SUB1011,V-E1011,tal,gold,12-Mar-1967,81 HaNassi,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1011,SUB1011,V-D1011-01,ron,gold,20-Jan-2016,81 HaNassi,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1012,SUB1012,V-E1012,dan,friedman,08-Jan-1970,63 Herzl St,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1013,SUB1013,V-S1013,ron,weiss,17-May-1965,11 Rothschild,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1013,SUB1013,V-D1013-01,david,weiss,18-Apr-2014,11 Rothschild,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1014,SUB1014,V-E1014,leah,hazan,17-Aug-1978,89 Ben Yehuda,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1014,SUB1014,V-S1014,yasmin,hazan,11-Feb-1969,89 Ben Yehuda,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1014,SUB1014,V-D1014-01,ava,hazan,19-Apr-2016,89 Ben Yehuda,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1015,SUB1015,V-E1015,noa,kaplan,28-Jan-1959,1 Jaffa Rd,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1015,SUB1015,V-S1015,tal,kaplan,22-May-1970,1 Jaffa Rd,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1015,SUB1015,V-D1015-01,yael,kaplan,05-Sep-2011,1 Jaffa Rd,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1015,SUB1015,V-D1015-02,iris,kaplan,26-Apr-2015,1 Jaffa Rd,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1016,SUB1016,V-E1016,hila,biton,14-Jul-1977,53 Ben Yehuda,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1016,SUB1016,V-S1016,iris,biton,21-Nov-1958,53 Ben Yehuda,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1016,SUB1016,V-D1016-01,idan,biton,13-Jan-2009,53 Ben Yehuda,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1017,SUB1017,V-E1017,omar,weiss,14-Mar-1983,44 Jaffa Rd,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1017,SUB1017,V-S1017,itai,weiss,15-Feb-1970,44 Jaffa Rd,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1018,SUB1018,V-E1018,ron,cohen,06-Apr-1960,13 Herzl St,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1018,SUB1018,V-S1018,yael,cohen,02-Jul-1968,13 Herzl St,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1018,SUB1018,V-D1018-01,zoe,cohen,13-Jan-2014,13 Herzl St,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1018,SUB1018,V-D1018-03,tomer,cohen,23-Nov-2016,13 Herzl St,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1019,SUB1019,V-E1019,noa,berkowitz,02-Sep-2002,20 Ben Yehuda,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1020,SUB1020,V-E1020,lior,nissan,17-Jan-1965,7 Arlozorov,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1020,SUB1020,V-S1020,zoe,nissan,03-Oct-1959,7 Arlozorov,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1020,SUB1020,V-D1020-01,hila,nissan,04-Jul-2011,7 Arlozorov,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1021,SUB1021,V-E1021,shira,green,19-Nov-1981,32 Arlozorov,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1021,SUB1021,V-S1021,eli,green,22-Apr-1971,32 Arlozorov,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1022,SUB1022,V-E1022,sam,hazan,11-Aug-1974,41 Ben Yehuda,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1022,SUB1022,V-D1022-01,lior,hazan,15-Jan-2009,41 Ben Yehuda,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1023,SUB1023,V-E1023,omar,nissan,12-Mar-1971,73 Jaffa Rd,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1023,SUB1023,V-D1023-01,matan,nissan,10-Jun-2011,73 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1024,SUB1024,V-E1024,shira,hazan,22-Jan-1988,57 Ibn Gabirol,Jerusalem,JM,9100002,E,VISION_A,basic,N,ignore_me
+FAM1024,SUB1024,V-D1024-01,rina,hazan,09-Mar-2009,57 Ibn Gabirol,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1025,SUB1025,V-E1025,rina,gold,11-Dec-1968,14 Ibn Gabirol,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1025,SUB1025,V-S1025,idan,gold,16-Sep-1971,14 Ibn Gabirol,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1025,SUB1025,V-D1025-01,adam,gold,21-Feb-2008,14 Ibn Gabirol,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1026,SUB1026,V-E1026,gadi,shapiro,24-Mar-2012,36 Herzl St,Rishon LeZion,RL,7530006,E,VISION_A,basic,N,ignore_me
+FAM1026,SUB1026,V-S1026,tomer,shapiro,01-Sep-1982,36 Herzl St,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1027,SUB1027,V-E1027,sarah,adler,05-Sep-1992,10 Dizengoff,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1027,SUB1027,V-S1027,noa,adler,26-Jun-1974,10 Dizengoff,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1027,SUB1027,V-D1027-01,david,adler,07-Jun-2008,10 Dizengoff,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1027,SUB1027,V-D1027-02,hila,adler,04-Nov-2011,10 Dizengoff,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1027,SUB1027,V-D1027-03,dan,adler,20-Jul-2016,10 Dizengoff,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1028,SUB1028,V-E1028,yoni,mizrahi,06-Jan-1981,20 Ben Yehuda,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1029,SUB1029,V-E1029,yoni,haddad,28-Jan-1979,53 Ben Yehuda,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1029,SUB1029,V-S1029,omar,haddad,12-Aug-2007,53 Ben Yehuda,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1030,SUB1030,V-E1030,omar,azulai,28-May-1976,30 Ben Yehuda,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1030,SUB1030,V-S1030,gadi,azulai,21-Jun-1972,30 Ben Yehuda,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1030,SUB1030,V-D1030-01,tal,azulai,27-Nov-2014,30 Ben Yehuda,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1031,SUB1031,V-E1031,adam,mizrahi,02-May-1992,43 Herzl St,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1031,SUB1031,V-S1031,nina,mizrahi,26-Dec-1977,43 Herzl St,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1032,SUB1032,V-E1032,maya,azulai,09-Apr-1991,56 Arlozorov,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1032,SUB1032,V-S1032,nina,azulai,26-Sep-1955,56 Arlozorov,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1032,SUB1032,V-D1032-01,ron,azulai,14-Jun-2011,56 Arlozorov,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1033,SUB1033,V-E1033,hila,haddad,17-May-2001,86 Allenby,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1033,SUB1033,V-S1033,nina,haddad,23-Jul-1975,86 Allenby,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1034,SUB1034,V-E1034,hila,azulai,06-Dec-1998,71 Dizengoff,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1034,SUB1034,V-S1034,rina,azulai,27-Sep-1980,71 Dizengoff,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1035,SUB1035,V-E1035,itai,ben-david,07-Nov-1983,75 Arlozorov,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1035,SUB1035,V-S1035,yoni,ben-david,06-Dec-2005,75 Arlozorov,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1035,SUB1035,V-D1035-01,hila,ben-david,17-May-2009,75 Arlozorov,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1036,SUB1036,V-E1036,sarah,kaplan,08-May-1998,82 Arlozorov,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1036,SUB1036,V-D1036-01,sam,kaplan,08-Jan-2008,82 Arlozorov,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1036,SUB1036,V-D1036-02,yael,kaplan,14-Aug-2009,82 Arlozorov,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1037,SUB1037,V-E1037,leah,golan,05-Apr-1980,74 Ben Yehuda,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1037,SUB1037,V-S1037,ava,golan,25-Feb-2003,74 Ben Yehuda,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1038,SUB1038,V-E1038,tomer,nissan,18-Jan-1984,29 Dizengoff,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1038,SUB1038,V-S1038,david,nissan,05-Aug-1962,29 Dizengoff,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1038,SUB1038,V-D1038-01,yoni,nissan,17-Nov-2015,29 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1038,SUB1038,V-D1038-02,ron,nissan,20-Aug-2013,29 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1038,SUB1038,V-D1038-03,sarah,nissan,27-Jul-2016,29 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1039,SUB1039,V-E1039,yael,ben-david,27-Apr-1971,58 Dizengoff,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1039,SUB1039,V-S1039,gadi,ben-david,16-Sep-2004,58 Dizengoff,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1039,SUB1039,V-D1039-01,idan,ben-david,15-May-2011,58 Dizengoff,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1040,SUB1040,V-E1040,eli,katz,05-Feb-1989,92 HaNassi,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1040,SUB1040,V-S1040,leah,katz,23-Mar-1999,92 HaNassi,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1040,SUB1040,V-D1040-01,omar,katz,14-Jul-2009,92 HaNassi,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1040,SUB1040,V-D1040-02,eli,katz,14-Aug-2016,92 HaNassi,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1041,SUB1041,V-E1041,gadi,berkowitz,28-Jan-1999,27 King George,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1042,SUB1042,V-E1042,dan,friedman,18-Jul-2014,49 Rothschild,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1042,SUB1042,V-D1042-01,ron,friedman,08-Aug-2011,49 Rothschild,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1043,SUB1043,V-E1043,eli,azulai,27-Mar-2001,56 Rothschild,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1043,SUB1043,V-S1043,sam,azulai,01-Sep-1994,56 Rothschild,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1043,SUB1043,V-D1043-01,lior,azulai,19-Oct-2014,56 Rothschild,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1043,SUB1043,V-D1043-02,hila,azulai,21-Feb-2008,56 Rothschild,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1043,SUB1043,V-D1043-03,nina,azulai,06-Aug-2010,56 Rothschild,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1044,SUB1044,V-E1044,itai,katz,09-Jul-1976,34 King George,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1045,SUB1045,V-S1045,gadi,weiss,25-Jan-1996,33 Jaffa Rd,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1045,SUB1045,V-D1045-01,ava,weiss,27-Apr-2011,33 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1045,SUB1045,V-D1045-03,yael,weiss,07-Oct-2009,33 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1046,SUB1046,V-E1046,zoe,gold,23-Dec-1993,90 HaNassi,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1046,SUB1046,V-S1046,sarah,gold,04-May-1965,90 HaNassi,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1046,SUB1046,V-D1046-01,nadav,gold,19-May-2008,90 HaNassi,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1047,SUB1047,V-E1047,omar,green,27-Dec-1992,49 King George,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1047,SUB1047,V-S1047,maya,green,28-May-1999,49 King George,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1047,SUB1047,V-D1047-01,hila,green,26-Oct-2009,49 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1048,SUB1048,V-E1048,dan,green,11-Nov-1987,45 Ibn Gabirol,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1048,SUB1048,V-S1048,nina,green,04-Aug-2007,45 Ibn Gabirol,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1049,SUB1049,V-E1049,nina,mizrahi,21-Sep-2001,47 Rothschild,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1049,SUB1049,V-S1049,yoni,mizrahi,15-Aug-1989,47 Rothschild,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1050,SUB1050,V-E1050,david,kaplan,15-May-1960,94 Arlozorov,Rishon LeZion,RL,7530006,E,VISION_A,basic,N,ignore_me
+FAM1050,SUB1050,V-S1050,itai,kaplan,22-Oct-1991,94 Arlozorov,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1050,SUB1050,V-D1050-01,leah,kaplan,16-Jan-2013,94 Arlozorov,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1051,SUB1051,V-E1051,yoni,baron,20-May-1976,24 Rothschild,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1051,SUB1051,V-D1051-01,adam,baron,17-Jan-2016,24 Rothschild,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1051,SUB1051,V-D1051-02,omar,baron,24-Apr-2009,24 Rothschild,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1052,SUB1052,V-E1052,tomer,golan,16-Dec-1996,63 Ibn Gabirol,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1052,SUB1052,V-S1052,ava,golan,08-May-1960,63 Ibn Gabirol,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1052,SUB1052,V-D1052-01,leah,golan,22-May-2011,63 Ibn Gabirol,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1052,SUB1052,V-D1052-02,nadav,golan,18-Aug-2013,63 Ibn Gabirol,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1053,SUB1053,V-E1053,ron,katz,15-Dec-1977,45 King George,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1053,SUB1053,V-S1053,adam,katz,24-Feb-1969,45 King George,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1054,SUB1054,V-S1054,iris,mizrahi,20-Sep-1992,41 Jaffa Rd,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1055,SUB1055,V-E1055,dan,mizrahi,23-Jan-1974,13 Ben Yehuda,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1055,SUB1055,V-S1055,adam,mizrahi,18-Jan-1957,13 Ben Yehuda,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1056,SUB1056,V-E1056,gadi,golan,19-Jan-1961,90 Dizengoff,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1056,SUB1056,V-S1056,yael,golan,06-Jun-1983,90 Dizengoff,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1056,SUB1056,V-D1056-02,sarah,golan,16-Jul-2009,90 Dizengoff,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1056,SUB1056,V-D1056-03,liam,golan,05-Mar-2008,90 Dizengoff,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1057,SUB1057,V-E1057,maya,weiss,20-Jul-2003,39 Jaffa Rd,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1057,SUB1057,V-S1057,shira,weiss,13-Sep-1969,39 Jaffa Rd,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1057,SUB1057,V-D1057-01,itai,weiss,28-May-2015,39 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1057,SUB1057,V-D1057-02,nadav,weiss,19-May-2014,39 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1057,SUB1057,V-D1057-03,shira,weiss,24-Oct-2008,39 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1058,SUB1058,V-E1058,adam,green,06-Apr-1965,98 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1058,SUB1058,V-S1058,zoe,green,15-Jul-1955,98 Ben Yehuda,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1059,SUB1059,V-E1059,yasmin,friedman,23-May-2000,77 Rothschild,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1060,SUB1060,V-E1060,yoni,hazan,26-Nov-1992,88 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1060,SUB1060,V-D1060-01,nina,hazan,08-Sep-2009,88 Ben Yehuda,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1061,SUB1061,V-E1061,rina,gold,10-Oct-2002,10 Herzl St,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1061,SUB1061,V-S1061,itai,gold,23-May-1999,10 Herzl St,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1062,SUB1062,V-E1062,itai,green,14-Jan-1993,35 Ibn Gabirol,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1062,SUB1062,V-D1062-01,shira,green,03-Jan-2012,35 Ibn Gabirol,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1063,SUB1063,V-E1063,ava,baron,25-Jan-1991,87 Arlozorov,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1064,SUB1064,V-E1064,zoe,berkowitz,27-Nov-1982,67 Rothschild,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1064,SUB1064,V-S1064,liam,berkowitz,14-Jun-1985,67 Rothschild,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1065,SUB1065,V-E1065,eli,biton,10-Aug-1999,42 Jaffa Rd,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1065,SUB1065,V-S1065,leah,biton,02-Sep-2007,42 Jaffa Rd,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1065,SUB1065,V-D1065-01,itai,biton,09-Jun-2009,42 Jaffa Rd,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1065,SUB1065,V-D1065-02,eli,biton,28-Jul-2009,42 Jaffa Rd,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1066,SUB1066,V-E1066,noa,peretz,20-Jun-1988,1 Ibn Gabirol,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1066,SUB1066,V-D1066-01,idan,peretz,07-Jan-2015,1 Ibn Gabirol,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1067,SUB1067,V-E1067,idan,gold,23-Apr-2006,90 Rothschild,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1067,SUB1067,V-S1067,ron,gold,14-Sep-1955,90 Rothschild,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1067,SUB1067,V-D1067-01,liam,gold,15-Feb-2011,90 Rothschild,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1067,SUB1067,V-D1067-02,maya,gold,23-Aug-2010,90 Rothschild,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1068,SUB1068,V-E1068,yael,golan,18-Aug-1970,66 HaNassi,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1068,SUB1068,V-S1068,omar,golan,24-Sep-1993,66 HaNassi,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1068,SUB1068,V-D1068-01,matan,golan,09-Feb-2010,66 HaNassi,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1069,SUB1069,V-E1069,ava,friedman,27-May-2001,44 Ibn Gabirol,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1069,SUB1069,V-S1069,hila,friedman,15-Mar-1986,44 Ibn Gabirol,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1070,SUB1070,V-E1070,gadi,weiss,11-Aug-1979,62 Allenby,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1071,SUB1071,V-E1071,david,biton,24-Jun-1957,31 Arlozorov,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1071,SUB1071,V-S1071,lior,biton,13-Jul-2006,31 Arlozorov,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1071,SUB1071,V-D1071-01,hila,biton,02-Aug-2010,31 Arlozorov,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1071,SUB1071,V-D1071-02,sam,biton,11-Oct-2016,31 Arlozorov,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1072,SUB1072,V-E1072,itai,cohen,14-Mar-2001,57 Jaffa Rd,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1073,SUB1073,V-E1073,adam,katz,13-Dec-1994,10 Rothschild,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1073,SUB1073,V-S1073,david,katz,28-Nov-1976,10 Rothschild,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1073,SUB1073,V-D1073-01,ron,katz,21-Jun-2014,10 Rothschild,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1074,SUB1074,V-E1074,noa,gold,21-Apr-1959,98 Rothschild,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1074,SUB1074,V-S1074,rina,gold,03-Dec-1969,98 Rothschild,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1075,SUB1075,V-E1075,tomer,friedman,11-Jan-1956,13 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1075,SUB1075,V-D1075-01,rina,friedman,14-Jun-2013,13 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1075,SUB1075,V-D1075-02,sam,friedman,14-Sep-2011,13 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1076,SUB1076,V-S1076,lior,gold,08-Mar-1992,88 Dizengoff,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1076,SUB1076,V-D1076-01,itai,gold,09-Aug-2012,88 Dizengoff,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1076,SUB1076,V-D1076-02,hila,gold,10-Aug-2008,88 Dizengoff,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1077,SUB1077,V-S1077,itai,berkowitz,13-Apr-1974,70 Dizengoff,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1077,SUB1077,V-D1077-01,david,berkowitz,08-Feb-2015,70 Dizengoff,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1078,SUB1078,V-E1078,tomer,friedman,13-Nov-1956,74 Allenby,Rishon LeZion,RL,7530006,E,VISION_B,premium,N,ignore_me
+FAM1078,SUB1078,V-S1078,nadav,friedman,02-Dec-1998,74 Allenby,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1078,SUB1078,V-D1078-01,lior,friedman,25-May-2015,74 Allenby,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1078,SUB1078,V-D1078-02,yoni,friedman,26-Oct-2011,74 Allenby,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1079,SUB1079,V-E1079,hila,shapiro,21-Feb-1995,29 Ben Yehuda,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1079,SUB1079,V-S1079,rina,shapiro,02-Aug-2005,29 Ben Yehuda,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1080,SUB1080,V-E1080,rina,katz,06-Jul-2002,47 Dizengoff,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1080,SUB1080,V-S1080,yoni,katz,17-Jun-1989,47 Dizengoff,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1080,SUB1080,V-D1080-01,tal,katz,09-Mar-2012,47 Dizengoff,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1081,SUB1081,V-E1081,itai,green,28-Apr-1964,38 Allenby,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1081,SUB1081,V-S1081,hila,green,12-Sep-1980,38 Allenby,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1082,SUB1082,V-E1082,maya,ben-david,24-Nov-1978,51 Herzl St,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1082,SUB1082,V-S1082,nadav,ben-david,12-Nov-1979,51 Herzl St,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1083,SUB1083,V-E1083,shira,weiss,08-Oct-1975,87 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1083,SUB1083,V-S1083,idan,weiss,23-Aug-2007,87 Ben Yehuda,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1083,SUB1083,V-D1083-01,rina,weiss,05-Feb-2014,87 Ben Yehuda,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1083,SUB1083,V-D1083-02,noa,weiss,16-May-2008,87 Ben Yehuda,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1084,SUB1084,V-E1084,sam,azulai,22-Jun-1984,13 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1084,SUB1084,V-D1084-01,tomer,azulai,19-Jul-2016,13 Ben Yehuda,Tel Aviv,TA,6100001,D,VISION_A,basic,N,ignore_me
+FAM1085,SUB1085,V-E1085,idan,haddad,14-Oct-1986,94 Dizengoff,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1085,SUB1085,V-D1085-01,adam,haddad,12-Dec-2008,94 Dizengoff,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1086,SUB1086,V-S1086,idan,adler,13-Jan-1977,57 Rothschild,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1086,SUB1086,V-D1086-01,adam,adler,28-Feb-2011,57 Rothschild,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1087,SUB1087,V-E1087,shira,cohen,08-Jun-1958,12 Ben Yehuda,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1087,SUB1087,V-D1087-01,yoni,cohen,27-Feb-2011,12 Ben Yehuda,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1088,SUB1088,V-E1088,david,kaplan,26-Mar-1976,27 Arlozorov,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1088,SUB1088,V-D1088-01,ava,kaplan,05-Mar-2012,27 Arlozorov,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1089,SUB1089,V-E1089,david,cohen,12-Jan-1963,33 Dizengoff,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1089,SUB1089,V-D1089-01,yasmin,cohen,06-Jan-2013,33 Dizengoff,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1089,SUB1089,V-D1089-02,adam,cohen,24-Mar-2008,33 Dizengoff,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1090,SUB1090,V-S1090,itai,ben-david,20-Apr-1987,68 Jaffa Rd,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1090,SUB1090,V-D1090-01,noa,ben-david,15-May-2016,68 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_B,premium,N,ignore_me
+FAM1090,SUB1090,V-D1090-02,idan,ben-david,16-Jan-2008,68 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1091,SUB1091,V-E1091,lior,ben-david,11-Feb-1959,55 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_B,premium,N,ignore_me
+FAM1091,SUB1091,V-S1091,liam,ben-david,20-May-1963,55 Jaffa Rd,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1091,SUB1091,V-D1091-01,idan,ben-david,11-Dec-2016,55 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1092,SUB1092,V-E1092,tal,gold,26-Feb-1982,77 Ibn Gabirol,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1093,SUB1093,V-E1093,omar,biton,14-Apr-1983,84 Ibn Gabirol,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1093,SUB1093,V-S1093,itai,biton,24-Jul-1980,84 Ibn Gabirol,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1093,SUB1093,V-D1093-01,maya,biton,11-Jul-2013,84 Ibn Gabirol,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1093,SUB1093,V-D1093-02,hila,biton,05-Jun-2012,84 Ibn Gabirol,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1093,SUB1093,V-D1093-03,hila,biton,03-Feb-2015,84 Ibn Gabirol,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1094,SUB1094,V-E1094,iris,adler,18-Mar-2006,12 King George,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1094,SUB1094,V-S1094,ron,adler,22-Jun-1990,12 King George,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1094,SUB1094,V-D1094-01,maya,adler,28-Jun-2014,12 King George,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1095,SUB1095,V-E1095,iris,levi,10-Oct-1973,97 King George,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1095,SUB1095,V-S1095,nadav,levi,05-Apr-1987,97 King George,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1095,SUB1095,V-D1095-01,hila,levi,28-Apr-2015,97 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1095,SUB1095,V-D1095-02,maya,levi,12-Sep-2013,97 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1095,SUB1095,V-D1095-03,maya,levi,08-Oct-2012,97 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1096,SUB1096,V-E1096,idan,weiss,22-Oct-1956,72 Arlozorov,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1097,SUB1097,V-E1097,gadi,friedman,01-Jun-1976,4 Dizengoff,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1097,SUB1097,V-S1097,sam,friedman,13-Nov-1991,4 Dizengoff,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1097,SUB1097,V-D1097-01,liam,friedman,21-Dec-2010,4 Dizengoff,Haifa,HA,3320004,D,VISION_A,basic,N,ignore_me
+FAM1097,SUB1097,V-D1097-02,ava,friedman,17-Dec-2009,4 Dizengoff,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1098,SUB1098,V-E1098,zoe,adler,11-Dec-1974,49 King George,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1099,SUB1099,V-E1099,sam,mizrahi,02-Oct-2003,77 Jaffa Rd,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1099,SUB1099,V-S1099,adam,mizrahi,14-Nov-1983,77 Jaffa Rd,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1099,SUB1099,V-D1099-01,yael,mizrahi,09-Jul-2015,77 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1100,SUB1100,V-E1100,nina,haddad,22-Nov-1973,97 Ibn Gabirol,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1100,SUB1100,V-S1100,tal,haddad,02-May-1997,97 Ibn Gabirol,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1101,SUB1101,V-E1101,omar,friedman,25-Mar-1968,51 Arlozorov,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1101,SUB1101,V-S1101,eli,friedman,16-Jan-1962,51 Arlozorov,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1101,SUB1101,V-D1101-01,iris,friedman,05-Mar-2014,51 Arlozorov,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1101,SUB1101,V-D1101-02,leah,friedman,08-Dec-2016,51 Arlozorov,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1102,SUB1102,V-E1102,david,levi,15-Jan-1982,72 Allenby,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1103,SUB1103,V-E1103,tomer,hazan,04-May-1981,74 King George,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1103,SUB1103,V-D1103-01,sarah,hazan,14-Feb-2013,74 King George,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1104,SUB1104,V-E1104,tal,green,24-May-1980,32 King George,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1104,SUB1104,V-S1104,eli,green,03-Mar-2004,32 King George,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1104,SUB1104,V-D1104-01,tal,green,17-Sep-2009,32 King George,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1105,SUB1105,V-E1105,sarah,hazan,08-Mar-2007,45 Allenby,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1105,SUB1105,V-S1105,adam,hazan,20-Mar-1967,45 Allenby,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1105,SUB1105,V-D1105-01,sam,hazan,25-Mar-2009,45 Allenby,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1105,SUB1105,V-D1105-02,idan,hazan,25-Aug-2015,45 Allenby,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1105,SUB1105,V-D1105-03,nadav,hazan,19-Nov-2015,45 Allenby,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1106,SUB1106,V-E1106,idan,katz,03-Aug-1964,82 Arlozorov,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1106,SUB1106,V-S1106,idan,katz,19-May-1974,82 Arlozorov,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1107,SUB1107,V-E1107,itai,ben-david,12-Jan-1957,46 Ibn Gabirol,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1107,SUB1107,V-D1107-01,liam,ben-david,20-Oct-2009,46 Ibn Gabirol,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1108,SUB1108,V-E1108,yoni,levi,21-Oct-1983,50 Rothschild,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1108,SUB1108,V-S1108,shira,levi,05-Sep-1985,50 Rothschild,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1109,SUB1109,V-E1109,sarah,katz,17-Feb-2000,58 Jaffa Rd,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1109,SUB1109,V-D1109-01,itai,katz,20-Sep-2016,58 Jaffa Rd,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1109,SUB1109,V-D1109-02,zoe,katz,10-Jun-2013,58 Jaffa Rd,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1109,SUB1109,V-D1109-03,leah,katz,22-Jun-2014,58 Jaffa Rd,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1110,SUB1110,V-E1110,maya,weiss,10-Jul-1998,7 Allenby,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1110,SUB1110,V-S1110,david,weiss,28-Oct-1997,7 Allenby,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1110,SUB1110,V-D1110-01,sam,weiss,19-Feb-2013,7 Allenby,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1110,SUB1110,V-D1110-02,hila,weiss,10-Jun-2010,7 Allenby,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1111,SUB1111,V-E1111,tomer,green,13-Sep-1974,90 King George,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1111,SUB1111,V-S1111,eli,green,22-Mar-2007,90 King George,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1111,SUB1111,V-D1111-01,tomer,green,21-Feb-2016,90 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1112,SUB1112,V-E1112,dan,friedman,11-Apr-1966,55 Ibn Gabirol,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1112,SUB1112,V-D1112-01,yael,friedman,05-Apr-2011,55 Ibn Gabirol,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1113,SUB1113,V-E1113,maya,nissan,27-Sep-2004,10 HaNassi,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1114,SUB1114,V-E1114,shira,shapiro,05-Jul-1993,5 Allenby,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1114,SUB1114,V-S1114,sarah,shapiro,26-Oct-1999,5 Allenby,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1114,SUB1114,V-D1114-01,matan,shapiro,15-Dec-2010,5 Allenby,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1115,SUB1115,V-E1115,yasmin,ben-david,25-May-1994,53 Allenby,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1115,SUB1115,V-D1115-01,itai,ben-david,08-Sep-2011,53 Allenby,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1115,SUB1115,V-D1115-02,rina,ben-david,12-Apr-2015,53 Allenby,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1115,SUB1115,V-D1115-03,hila,ben-david,25-Aug-2015,53 Allenby,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1116,SUB1116,V-E1116,zoe,peretz,05-Oct-2006,49 Ibn Gabirol,Haifa,HA,3320004,E,VISION_A,basic,N,ignore_me
+FAM1116,SUB1116,V-D1116-01,noa,peretz,18-Jun-2015,49 Ibn Gabirol,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1116,SUB1116,V-D1116-02,lior,peretz,28-Dec-2009,49 Ibn Gabirol,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1116,SUB1116,V-D1116-03,tal,peretz,03-May-2009,49 Ibn Gabirol,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1117,SUB1117,V-E1117,sam,biton,27-Apr-1960,35 Rothschild,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1117,SUB1117,V-S1117,dan,biton,02-Jul-1956,35 Rothschild,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1117,SUB1117,V-D1117-01,leah,biton,08-Jun-2016,35 Rothschild,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1117,SUB1117,V-D1117-02,leah,biton,08-Jun-2009,35 Rothschild,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1118,SUB1118,V-S1118,lior,katz,27-Dec-1985,41 Jaffa Rd,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1119,SUB1119,V-E1119,ava,green,07-May-1956,98 Rothschild,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1119,SUB1119,V-D1119-01,ron,green,04-Jul-2016,98 Rothschild,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1119,SUB1119,V-D1119-02,gadi,green,10-Apr-2012,98 Rothschild,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1119,SUB1119,V-D1119-03,maya,green,14-Apr-2008,98 Rothschild,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1120,SUB1120,V-E1120,sarah,golan,01-Sep-1993,80 Rothschild,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1120,SUB1120,V-S1120,nadav,golan,05-Dec-1970,80 Rothschild,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1121,SUB1121,V-E1121,yasmin,berkowitz,22-Mar-1981,55 Herzl St,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1121,SUB1121,V-S1121,tal,berkowitz,17-Feb-1978,55 Herzl St,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1121,SUB1121,V-D1121-01,ron,berkowitz,18-Sep-2016,55 Herzl St,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1121,SUB1121,V-D1121-02,ava,berkowitz,02-Aug-2014,55 Herzl St,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1122,SUB1122,V-E1122,ava,adler,12-Feb-2005,50 Allenby,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1122,SUB1122,V-D1122-01,nadav,adler,02-Mar-2013,50 Allenby,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1122,SUB1122,V-D1122-02,dan,adler,27-Jun-2016,50 Allenby,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1122,SUB1122,V-D1122-03,idan,adler,15-Nov-2010,50 Allenby,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1123,SUB1123,V-E1123,liam,ben-david,07-May-1957,62 Dizengoff,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1123,SUB1123,V-S1123,omar,ben-david,10-Jun-1957,62 Dizengoff,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1123,SUB1123,V-D1123-01,tal,ben-david,16-Sep-2014,62 Dizengoff,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1124,SUB1124,V-E1124,david,levi,09-Jun-1996,5 Ben Yehuda,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1124,SUB1124,V-S1124,dan,levi,24-Jul-1982,5 Ben Yehuda,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1125,SUB1125,V-E1125,yael,golan,09-Sep-1978,50 Allenby,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1125,SUB1125,V-D1125-01,iris,golan,14-Feb-2014,50 Allenby,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1125,SUB1125,V-D1125-02,shira,golan,10-Sep-2010,50 Allenby,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1125,SUB1125,V-D1125-03,eli,golan,11-Feb-2009,50 Allenby,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1126,SUB1126,V-E1126,tomer,biton,15-Dec-1965,38 HaNassi,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1126,SUB1126,V-S1126,noa,biton,20-Jun-2001,38 HaNassi,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1126,SUB1126,V-D1126-01,nina,biton,26-Nov-2012,38 HaNassi,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1126,SUB1126,V-D1126-02,noa,biton,21-Nov-2009,38 HaNassi,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1127,SUB1127,V-E1127,hila,mizrahi,28-Mar-1956,47 Ibn Gabirol,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1127,SUB1127,V-S1127,yoni,mizrahi,05-Jan-1983,47 Ibn Gabirol,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1127,SUB1127,V-D1127-01,liam,mizrahi,12-Nov-2011,47 Ibn Gabirol,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1127,SUB1127,V-D1127-02,dan,mizrahi,02-Oct-2014,47 Ibn Gabirol,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1127,SUB1127,V-D1127-03,shira,mizrahi,15-Nov-2010,47 Ibn Gabirol,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1128,SUB1128,V-E1128,nadav,shapiro,13-Jun-1988,48 Rothschild,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1128,SUB1128,V-S1128,adam,shapiro,01-Feb-1970,48 Rothschild,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1129,SUB1129,V-E1129,adam,ben-david,10-Oct-1968,72 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1129,SUB1129,V-S1129,yael,ben-david,05-Feb-1967,72 Jaffa Rd,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1129,SUB1129,V-D1129-01,david,ben-david,06-Aug-2009,72 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1130,SUB1130,V-E1130,david,katz,23-Jun-1997,57 Jaffa Rd,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1130,SUB1130,V-S1130,ron,katz,28-May-1973,57 Jaffa Rd,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1130,SUB1130,V-D1130-01,zoe,katz,17-Jun-2010,57 Jaffa Rd,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1131,SUB1131,V-E1131,yasmin,golan,18-Jun-1956,16 Ben Yehuda,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1131,SUB1131,V-S1131,itai,golan,05-Sep-2006,16 Ben Yehuda,Jerusalem,JM,9100002,S,VISION_A,basic,N,ignore_me
+FAM1132,SUB1132,V-E1132,tomer,golan,25-Jul-1988,12 Jaffa Rd,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1132,SUB1132,V-S1132,nadav,golan,11-Mar-1959,12 Jaffa Rd,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1132,SUB1132,V-D1132-01,idan,golan,15-Aug-2009,12 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1133,SUB1133,V-E1133,sarah,weiss,06-Oct-1995,67 Allenby,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1134,SUB1134,V-E1134,noa,haddad,10-Mar-1988,56 Ibn Gabirol,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1134,SUB1134,V-S1134,eli,haddad,12-Apr-2000,56 Ibn Gabirol,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1135,SUB1135,V-E1135,idan,friedman,03-Sep-1994,82 Ibn Gabirol,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1135,SUB1135,V-S1135,zoe,friedman,05-Oct-1992,82 Ibn Gabirol,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1136,SUB1136,V-E1136,shira,katz,27-Jan-1991,85 Arlozorov,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1136,SUB1136,V-D1136-01,liam,katz,25-Nov-2008,85 Arlozorov,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1136,SUB1136,V-D1136-02,nadav,katz,07-Nov-2012,85 Arlozorov,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1137,SUB1137,V-E1137,yael,hazan,21-May-1989,54 Arlozorov,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1137,SUB1137,V-D1137-01,yael,hazan,13-Nov-2011,54 Arlozorov,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1138,SUB1138,V-E1138,zoe,ben-david,15-Aug-1981,59 Jaffa Rd,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1138,SUB1138,V-S1138,shira,ben-david,28-Jun-1964,59 Jaffa Rd,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1139,SUB1139,V-E1139,sam,adler,04-Sep-1987,41 Allenby,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1139,SUB1139,V-S1139,itai,adler,15-May-1962,41 Allenby,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1139,SUB1139,V-D1139-01,yasmin,adler,02-Feb-2010,41 Allenby,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1140,SUB1140,V-D1140-01,omar,mizrahi,17-Aug-2010,50 Arlozorov,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1140,SUB1140,V-D1140-03,ava,mizrahi,17-Jul-2009,50 Arlozorov,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1141,SUB1141,V-E1141,noa,levi,20-Aug-1973,31 Ben Yehuda,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1141,SUB1141,V-D1141-01,idan,levi,18-May-2015,31 Ben Yehuda,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1142,SUB1142,V-E1142,adam,adler,12-Jul-2003,14 King George,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1142,SUB1142,V-S1142,noa,adler,07-Sep-1991,14 King George,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1143,SUB1143,V-E1143,tal,ben-david,09-Sep-2003,71 HaNassi,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1143,SUB1143,V-D1143-01,shira,ben-david,04-Mar-2009,71 HaNassi,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1144,SUB1144,V-S1144,noa,shapiro,05-Jan-1957,48 Allenby,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1145,SUB1145,V-E1145,sam,gold,11-Mar-1987,43 Rothschild,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1145,SUB1145,V-D1145-01,eli,gold,20-Jul-2010,43 Rothschild,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1145,SUB1145,V-D1145-02,iris,gold,11-Oct-2012,43 Rothschild,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1145,SUB1145,V-D1145-03,tal,gold,16-Sep-2016,43 Rothschild,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1146,SUB1146,V-E1146,ava,adler,04-Nov-1976,73 HaNassi,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1147,SUB1147,V-E1147,adam,hazan,19-Oct-2005,40 Herzl St,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1148,SUB1148,V-E1148,leah,shapiro,08-Nov-2007,81 Arlozorov,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1148,SUB1148,V-S1148,tomer,shapiro,01-Apr-1962,81 Arlozorov,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1149,SUB1149,V-E1149,tomer,peretz,25-Sep-1981,41 King George,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1149,SUB1149,V-S1149,yael,peretz,02-Dec-2002,41 King George,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1149,SUB1149,V-D1149-01,tomer,peretz,07-Sep-2010,41 King George,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1149,SUB1149,V-D1149-02,ron,peretz,16-Nov-2013,41 King George,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1150,SUB1150,V-E1150,itai,weiss,12-Sep-1976,49 Allenby,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1150,SUB1150,V-S1150,david,weiss,21-Nov-2001,49 Allenby,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1151,SUB1151,V-E1151,yasmin,baron,08-May-1990,34 Arlozorov,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1151,SUB1151,V-D1151-01,rina,baron,07-Dec-2012,34 Arlozorov,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1151,SUB1151,V-D1151-02,tomer,baron,16-Jun-2015,34 Arlozorov,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1151,SUB1151,V-D1151-03,dan,baron,09-Dec-2016,34 Arlozorov,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1152,SUB1152,V-D1152-01,rina,azulai,23-May-2008,16 Arlozorov,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1153,SUB1153,V-E1153,iris,golan,27-Apr-1968,45 Rothschild,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1153,SUB1153,V-S1153,lior,golan,09-Dec-1990,45 Rothschild,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1153,SUB1153,V-D1153-01,sam,golan,24-Oct-2009,45 Rothschild,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1154,SUB1154,V-E1154,matan,nissan,08-Nov-1969,31 Ben Yehuda,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1154,SUB1154,V-S1154,nina,nissan,16-Dec-1976,31 Ben Yehuda,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1155,SUB1155,V-E1155,ron,mizrahi,16-Nov-2014,88 Dizengoff,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1156,SUB1156,V-E1156,liam,hazan,18-Apr-1991,83 Herzl St,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1157,SUB1157,V-E1157,zoe,levi,06-Aug-1980,23 King George,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1158,SUB1158,V-E1158,shira,haddad,15-May-1976,5 Herzl St,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1158,SUB1158,V-D1158-01,ron,haddad,05-Aug-2016,5 Herzl St,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1158,SUB1158,V-D1158-02,david,haddad,09-Aug-2016,5 Herzl St,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1159,SUB1159,V-E1159,itai,hazan,06-Dec-1971,15 Allenby,Jerusalem,JM,9100002,E,VISION_A,basic,N,ignore_me
+FAM1159,SUB1159,V-S1159,eli,hazan,19-May-2005,15 Allenby,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1160,SUB1160,V-E1160,david,hazan,17-Jul-1980,97 Ben Yehuda,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1160,SUB1160,V-S1160,leah,hazan,06-Feb-1997,97 Ben Yehuda,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1160,SUB1160,V-D1160-01,sam,hazan,08-Jun-2015,97 Ben Yehuda,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1161,SUB1161,V-E1161,gadi,baron,19-May-1976,34 King George,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1162,SUB1162,V-E1162,noa,haddad,06-May-1984,34 Allenby,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1162,SUB1162,V-D1162-01,maya,haddad,20-Jun-2012,34 Allenby,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1163,SUB1163,V-E1163,itai,gold,23-Jul-1978,29 Dizengoff,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1163,SUB1163,V-S1163,yael,gold,26-Sep-2003,29 Dizengoff,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1163,SUB1163,V-D1163-01,hila,gold,22-Apr-2011,29 Dizengoff,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1163,SUB1163,V-D1163-02,gadi,gold,15-Sep-2009,29 Dizengoff,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1164,SUB1164,V-E1164,nadav,haddad,17-Sep-1958,91 Allenby,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1164,SUB1164,V-S1164,ron,haddad,11-Mar-1964,91 Allenby,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1164,SUB1164,V-D1164-01,david,haddad,04-Aug-2016,91 Allenby,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1165,SUB1165,V-D1165-01,ron,nissan,26-Nov-2015,27 Arlozorov,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1166,SUB1166,V-E1166,noa,biton,03-Dec-1977,96 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1166,SUB1166,V-S1166,noa,biton,02-Aug-1959,96 Ben Yehuda,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1167,SUB1167,V-E1167,gadi,hazan,14-Nov-2001,53 Dizengoff,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1167,SUB1167,V-S1167,matan,hazan,28-Aug-1979,53 Dizengoff,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1168,SUB1168,V-E1168,hila,weiss,28-Nov-1963,49 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1168,SUB1168,V-S1168,zoe,weiss,17-Jul-1989,49 Jaffa Rd,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1168,SUB1168,V-D1168-01,sam,weiss,25-Jan-2011,49 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1169,SUB1169,V-E1169,ron,biton,27-Jul-1989,39 Rothschild,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1169,SUB1169,V-S1169,itai,biton,09-Mar-1977,39 Rothschild,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1169,SUB1169,V-D1169-01,omar,biton,26-Jan-2009,39 Rothschild,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1169,SUB1169,V-D1169-02,hila,biton,25-Oct-2014,39 Rothschild,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1169,SUB1169,V-D1169-03,lior,biton,07-Apr-2008,39 Rothschild,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1170,SUB1170,V-E1170,shira,levi,02-Dec-1970,13 Arlozorov,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1170,SUB1170,V-S1170,yasmin,levi,25-Apr-1989,13 Arlozorov,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1170,SUB1170,V-D1170-01,david,levi,17-Mar-2008,13 Arlozorov,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1171,SUB1171,V-E1171,shira,katz,05-May-1970,30 Arlozorov,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1171,SUB1171,V-D1171-01,tal,katz,10-Jul-2011,30 Arlozorov,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1171,SUB1171,V-D1171-02,adam,katz,19-Sep-2008,30 Arlozorov,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1172,SUB1172,V-E1172,noa,adler,13-Nov-1996,23 King George,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1172,SUB1172,V-D1172-01,eli,adler,05-Jul-2014,23 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1172,SUB1172,V-D1172-02,rina,adler,25-Mar-2014,23 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1173,SUB1173,V-E1173,rina,shapiro,02-Aug-2006,61 Ben Yehuda,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1173,SUB1173,V-S1173,nina,shapiro,05-Sep-1990,61 Ben Yehuda,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1174,SUB1174,V-E1174,idan,green,03-Jun-1983,32 HaNassi,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1174,SUB1174,V-S1174,sarah,green,09-Jan-1967,32 HaNassi,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1175,SUB1175,V-E1175,david,green,24-Oct-1967,87 Arlozorov,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1175,SUB1175,V-S1175,omar,green,28-Apr-1985,87 Arlozorov,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1176,SUB1176,V-E1176,omar,haddad,08-Aug-2002,39 Herzl St,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1176,SUB1176,V-S1176,tomer,haddad,08-Jul-1968,39 Herzl St,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1177,SUB1177,V-E1177,ron,hazan,09-May-1977,42 HaNassi,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1177,SUB1177,V-S1177,matan,hazan,04-Aug-1986,42 HaNassi,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1177,SUB1177,V-D1177-01,yoni,hazan,07-Jun-2015,42 HaNassi,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1178,SUB1178,V-E1178,david,kaplan,01-Mar-2002,41 King George,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1178,SUB1178,V-D1178-01,nina,kaplan,07-Mar-2012,41 King George,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1179,SUB1179,V-E1179,yasmin,golan,22-Nov-1990,30 King George,Haifa,HA,3320004,E,VISION_B,premium,N,ignore_me
+FAM1179,SUB1179,V-S1179,gadi,golan,24-Aug-2007,30 King George,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1180,SUB1180,V-E1180,iris,adler,24-Mar-1965,95 Rothschild,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1180,SUB1180,V-S1180,zoe,adler,02-Nov-1989,95 Rothschild,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1180,SUB1180,V-D1180-01,tal,adler,27-Feb-2008,95 Rothschild,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1181,SUB1181,V-E1181,sarah,hazan,23-Feb-1969,7 Herzl St,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1181,SUB1181,V-S1181,omar,hazan,12-Aug-1987,7 Herzl St,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1182,SUB1182,V-E1182,hila,golan,18-Jan-1956,80 Arlozorov,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1182,SUB1182,V-S1182,ava,golan,24-Sep-1956,80 Arlozorov,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1182,SUB1182,V-D1182-01,adam,golan,01-May-2016,80 Arlozorov,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1182,SUB1182,V-D1182-02,tal,golan,04-Mar-2014,80 Arlozorov,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1183,SUB1183,V-E1183,sarah,adler,03-Jul-1972,25 Arlozorov,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1183,SUB1183,V-S1183,leah,adler,08-Oct-1984,25 Arlozorov,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1183,SUB1183,V-D1183-01,tomer,adler,22-May-2011,25 Arlozorov,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1184,SUB1184,V-E1184,leah,azulai,02-Aug-1990,84 Herzl St,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1184,SUB1184,V-S1184,tomer,azulai,16-Feb-1965,84 Herzl St,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1185,SUB1185,V-E1185,david,haddad,08-Jan-1988,83 Allenby,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1185,SUB1185,V-S1185,david,haddad,16-Oct-1999,83 Allenby,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1185,SUB1185,V-D1185-01,adam,haddad,22-Feb-2008,83 Allenby,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1185,SUB1185,V-D1185-02,lior,haddad,19-Sep-2012,83 Allenby,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1185,SUB1185,V-D1185-03,hila,haddad,28-Mar-2008,83 Allenby,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1186,SUB1186,V-E1186,gadi,azulai,06-May-1959,3 Ben Yehuda,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1186,SUB1186,V-S1186,nadav,azulai,18-Nov-1979,3 Ben Yehuda,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1186,SUB1186,V-D1186-01,eli,azulai,05-Dec-2014,3 Ben Yehuda,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1187,SUB1187,V-E1187,dan,levi,08-Jul-1961,93 Jaffa Rd,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1187,SUB1187,V-D1187-01,eli,levi,01-Jun-2014,93 Jaffa Rd,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1187,SUB1187,V-D1187-02,idan,levi,16-Aug-2012,93 Jaffa Rd,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1188,SUB1188,V-E1188,nina,mizrahi,22-Oct-1998,46 Ibn Gabirol,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1188,SUB1188,V-S1188,gadi,mizrahi,26-May-1994,46 Ibn Gabirol,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1188,SUB1188,V-D1188-01,yasmin,mizrahi,09-Feb-2009,46 Ibn Gabirol,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1188,SUB1188,V-D1188-02,sam,mizrahi,26-Dec-2014,46 Ibn Gabirol,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1189,SUB1189,V-E1189,maya,green,15-May-1955,20 King George,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1189,SUB1189,V-S1189,adam,green,03-Mar-1961,20 King George,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1190,SUB1190,V-E1190,tal,biton,03-Jan-1961,56 Rothschild,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1190,SUB1190,V-S1190,liam,biton,26-Oct-1993,56 Rothschild,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1190,SUB1190,V-D1190-01,eli,biton,10-Jan-2014,56 Rothschild,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1190,SUB1190,V-D1190-03,matan,biton,19-Apr-2016,56 Rothschild,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1191,SUB1191,V-S1191,nina,friedman,10-Jul-1972,22 King George,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1191,SUB1191,V-D1191-01,yael,friedman,09-Jun-2009,22 King George,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1191,SUB1191,V-D1191-02,yasmin,friedman,20-Oct-2015,22 King George,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1192,SUB1192,V-E1192,ava,azulai,13-Oct-1976,59 Jaffa Rd,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1192,SUB1192,V-D1192-01,eli,azulai,14-Jun-2015,59 Jaffa Rd,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1193,SUB1193,V-E1193,shira,peretz,06-Jun-1985,77 Dizengoff,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1193,SUB1193,V-D1193-01,eli,peretz,23-Dec-2012,77 Dizengoff,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1194,SUB1194,V-E1194,yoni,azulai,19-Feb-1978,42 King George,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1194,SUB1194,V-S1194,ron,azulai,25-Nov-1966,42 King George,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1194,SUB1194,V-D1194-01,ron,azulai,15-Dec-2008,42 King George,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1195,SUB1195,V-E1195,yoni,biton,05-Aug-1998,89 Jaffa Rd,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1195,SUB1195,V-S1195,yasmin,biton,05-Nov-1971,89 Jaffa Rd,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1196,SUB1196,V-E1196,shira,golan,18-Jul-1992,55 King George,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1196,SUB1196,V-S1196,lior,golan,18-Jul-1999,55 King George,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1196,SUB1196,V-D1196-01,noa,golan,26-Dec-2013,55 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1197,SUB1197,V-S1197,idan,adler,13-Nov-1998,77 Jaffa Rd,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1197,SUB1197,V-D1197-01,gadi,adler,04-Jul-2013,77 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1197,SUB1197,V-D1197-02,ava,adler,08-May-2009,77 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1197,SUB1197,V-D1197-03,tal,adler,19-Sep-2016,77 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1198,SUB1198,V-E1198,leah,ben-david,19-Nov-2004,74 Ben Yehuda,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1198,SUB1198,V-S1198,sam,ben-david,16-Jan-1977,74 Ben Yehuda,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1198,SUB1198,V-D1198-01,maya,ben-david,03-Jul-2012,74 Ben Yehuda,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1199,SUB1199,V-E1199,eli,ben-david,17-Apr-2005,94 Dizengoff,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1199,SUB1199,V-S1199,yael,ben-david,24-Aug-1961,94 Dizengoff,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1199,SUB1199,V-D1199-01,tomer,ben-david,03-Jun-2015,94 Dizengoff,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1200,SUB1200,V-E1200,eli,hazan,26-Nov-1961,6 Jaffa Rd,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1200,SUB1200,V-S1200,iris,hazan,06-Sep-1970,6 Jaffa Rd,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1200,SUB1200,V-D1200-01,ron,hazan,18-Jun-2010,6 Jaffa Rd,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1201,SUB1201,V-E1201,hila,biton,24-Jan-1980,81 Dizengoff,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1201,SUB1201,V-S1201,omar,biton,14-Oct-1983,81 Dizengoff,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1202,SUB1202,V-E1202,gadi,green,26-Feb-1991,1 Ben Yehuda,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1202,SUB1202,V-D1202-01,zoe,green,07-Jun-2013,1 Ben Yehuda,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1202,SUB1202,V-D1202-02,itai,green,22-May-2009,1 Ben Yehuda,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1203,SUB1203,V-E1203,shira,azulai,12-Feb-1992,68 Allenby,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1203,SUB1203,V-S1203,itai,azulai,27-Mar-1994,68 Allenby,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1204,SUB1204,V-E1204,nadav,green,11-Mar-1998,91 HaNassi,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1204,SUB1204,V-S1204,rina,green,12-Mar-1962,91 HaNassi,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1204,SUB1204,V-D1204-01,tomer,green,13-Sep-2010,91 HaNassi,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1205,SUB1205,V-E1205,nina,mizrahi,18-Nov-1986,77 Dizengoff,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1205,SUB1205,V-S1205,idan,mizrahi,06-Sep-1966,77 Dizengoff,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1205,SUB1205,V-D1205-01,yael,mizrahi,06-Mar-2012,77 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1205,SUB1205,V-D1205-02,eli,mizrahi,02-Oct-2015,77 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1206,SUB1206,V-E1206,sarah,azulai,21-Sep-1990,2 Rothschild,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1206,SUB1206,V-S1206,hila,azulai,23-Jul-1986,2 Rothschild,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1207,SUB1207,V-E1207,ava,kaplan,09-Jan-1973,63 Dizengoff,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1207,SUB1207,V-S1207,rina,kaplan,19-Aug-1965,63 Dizengoff,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1207,SUB1207,V-D1207-01,iris,kaplan,17-Sep-2015,63 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1207,SUB1207,V-D1207-02,maya,kaplan,25-May-2009,63 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1208,SUB1208,V-E1208,noa,ben-david,14-Apr-1989,47 Ibn Gabirol,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1208,SUB1208,V-S1208,sarah,ben-david,10-Apr-1996,47 Ibn Gabirol,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1208,SUB1208,V-D1208-01,david,ben-david,09-Aug-2008,47 Ibn Gabirol,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1208,SUB1208,V-D1208-02,dan,ben-david,28-Aug-2009,47 Ibn Gabirol,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1208,SUB1208,V-D1208-03,maya,ben-david,26-Apr-2011,47 Ibn Gabirol,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1209,SUB1209,V-E1209,shira,hazan,20-Mar-1982,76 Allenby,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1209,SUB1209,V-S1209,omar,hazan,26-Apr-2007,76 Allenby,Netanya,NT,4230008,S,VISION_B,premium,N,ignore_me
+FAM1210,SUB1210,V-E1210,shira,weiss,23-Jun-1965,73 Allenby,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1210,SUB1210,V-S1210,nadav,weiss,22-Sep-1972,73 Allenby,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1210,SUB1210,V-D1210-01,sarah,weiss,25-Mar-2009,73 Allenby,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1210,SUB1210,V-D1210-02,yoni,weiss,09-Jan-2014,73 Allenby,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1211,SUB1211,V-E1211,tomer,katz,13-Nov-1970,17 Dizengoff,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1211,SUB1211,V-S1211,nadav,katz,21-May-1995,17 Dizengoff,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1211,SUB1211,V-D1211-01,nina,katz,03-Aug-2014,17 Dizengoff,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1212,SUB1212,V-E1212,iris,baron,15-Jun-1999,99 Jaffa Rd,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1212,SUB1212,V-D1212-01,eli,baron,03-Dec-2008,99 Jaffa Rd,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1213,SUB1213,V-E1213,yoni,weiss,14-Apr-1980,59 Allenby,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1213,SUB1213,V-D1213-01,yael,weiss,27-Jun-2012,59 Allenby,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1214,SUB1214,V-E1214,nadav,golan,22-Jun-2005,44 Ibn Gabirol,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1215,SUB1215,V-E1215,lior,mizrahi,01-Aug-2015,13 Rothschild,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1216,SUB1216,V-E1216,rina,mizrahi,21-Feb-1972,26 Dizengoff,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1216,SUB1216,V-S1216,liam,mizrahi,21-Nov-1978,26 Dizengoff,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1216,SUB1216,V-D1216-01,zoe,mizrahi,21-Jul-2008,26 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1216,SUB1216,V-D1216-02,rina,mizrahi,21-Jul-2011,26 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1217,SUB1217,V-E1217,yael,green,08-Oct-2010,91 Jaffa Rd,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1217,SUB1217,V-S1217,itai,green,23-Jan-1955,91 Jaffa Rd,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1217,SUB1217,V-D1217-01,eli,green,23-Jul-2009,91 Jaffa Rd,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1217,SUB1217,V-D1217-02,sam,green,08-Feb-2015,91 Jaffa Rd,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1218,SUB1218,V-E1218,dan,friedman,25-Jul-1963,12 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1218,SUB1218,V-D1218-01,david,friedman,22-Nov-2010,12 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1219,SUB1219,V-E1219,shira,hazan,12-Aug-1965,9 Ibn Gabirol,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1219,SUB1219,V-D1219-01,idan,hazan,20-Jul-2010,9 Ibn Gabirol,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1220,SUB1220,V-E1220,maya,shapiro,19-Feb-2003,57 Ben Yehuda,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1220,SUB1220,V-D1220-01,dan,shapiro,26-Jun-2014,57 Ben Yehuda,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1221,SUB1221,V-E1221,yasmin,weiss,24-Oct-1993,32 HaNassi,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1221,SUB1221,V-S1221,gadi,weiss,28-Jan-1999,32 HaNassi,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1221,SUB1221,V-D1221-01,david,weiss,17-Apr-2012,32 HaNassi,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1221,SUB1221,V-D1221-02,shira,weiss,24-Apr-2016,32 HaNassi,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1221,SUB1221,V-D1221-03,leah,weiss,02-Nov-2012,32 HaNassi,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1222,SUB1222,V-E1222,yael,hazan,17-Feb-1993,64 King George,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1222,SUB1222,V-D1222-01,ava,hazan,05-Jun-2013,64 King George,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1222,SUB1222,V-D1222-02,leah,hazan,18-Jun-2014,64 King George,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1223,SUB1223,V-E1223,gadi,green,03-Oct-1956,23 Rothschild,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1223,SUB1223,V-S1223,omar,green,26-Jan-1957,23 Rothschild,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1223,SUB1223,V-D1223-01,leah,green,21-May-2016,23 Rothschild,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1223,SUB1223,V-D1223-02,tomer,green,14-Jul-2016,23 Rothschild,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1224,SUB1224,V-E1224,ron,gold,03-May-1964,52 Jaffa Rd,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1224,SUB1224,V-S1224,tal,gold,18-Mar-1968,52 Jaffa Rd,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1224,SUB1224,V-D1224-01,eli,gold,21-Oct-2014,52 Jaffa Rd,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1224,SUB1224,V-D1224-02,gadi,gold,23-May-2009,52 Jaffa Rd,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1224,SUB1224,V-D1224-03,nina,gold,08-Jan-2011,52 Jaffa Rd,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1225,SUB1225,V-E1225,shira,levi,24-Nov-1974,56 Jaffa Rd,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1225,SUB1225,V-S1225,zoe,levi,23-Jan-1962,56 Jaffa Rd,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1226,SUB1226,V-E1226,dan,nissan,09-Dec-1988,90 Herzl St,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1226,SUB1226,V-S1226,sam,nissan,24-May-2002,90 Herzl St,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1226,SUB1226,V-D1226-01,matan,nissan,11-Jan-2009,90 Herzl St,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1226,SUB1226,V-D1226-02,yoni,nissan,17-May-2014,90 Herzl St,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1226,SUB1226,V-D1226-03,liam,nissan,19-Dec-2012,90 Herzl St,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1227,SUB1227,V-E1227,dan,levi,06-Oct-1986,10 Rothschild,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1227,SUB1227,V-S1227,adam,levi,19-Feb-2004,10 Rothschild,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1228,SUB1228,V-E1228,tal,cohen,08-Jan-1957,93 Jaffa Rd,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1228,SUB1228,V-S1228,dan,cohen,06-Mar-1979,93 Jaffa Rd,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1229,SUB1229,V-D1229-01,nadav,biton,17-Feb-2013,71 King George,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1230,SUB1230,V-E1230,tal,levi,15-Feb-1980,7 Dizengoff,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1230,SUB1230,V-D1230-01,gadi,levi,03-Jun-2012,7 Dizengoff,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1231,SUB1231,V-E1231,rina,berkowitz,24-May-2005,59 Herzl St,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1231,SUB1231,V-S1231,itai,berkowitz,16-Oct-1978,59 Herzl St,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1231,SUB1231,V-D1231-01,gadi,berkowitz,18-Dec-2011,59 Herzl St,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1231,SUB1231,V-D1231-02,gadi,berkowitz,01-Mar-2011,59 Herzl St,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1231,SUB1231,V-D1231-03,lior,berkowitz,08-Jan-2014,59 Herzl St,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1232,SUB1232,V-S1232,tal,azulai,16-Jul-1970,45 Herzl St,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1232,SUB1232,V-D1232-01,noa,azulai,09-Dec-2010,45 Herzl St,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1232,SUB1232,V-D1232-02,liam,azulai,28-Apr-2008,45 Herzl St,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1233,SUB1233,V-E1233,iris,green,17-Feb-1992,53 Allenby,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1233,SUB1233,V-S1233,sarah,green,19-Feb-1980,53 Allenby,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1233,SUB1233,V-D1233-01,nadav,green,22-Jul-2008,53 Allenby,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1233,SUB1233,V-D1233-02,sam,green,09-May-2011,53 Allenby,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1233,SUB1233,V-D1233-03,david,green,23-Jul-2013,53 Allenby,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1234,SUB1234,V-E1234,yasmin,green,25-Mar-1967,42 Allenby,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1234,SUB1234,V-D1234-01,maya,green,06-Feb-2010,42 Allenby,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1234,SUB1234,V-D1234-02,itai,green,14-Jun-2015,42 Allenby,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1235,SUB1235,V-E1235,omar,ben-david,09-Aug-1974,69 Allenby,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1236,SUB1236,V-E1236,tomer,gold,27-Apr-1957,21 HaNassi,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1236,SUB1236,V-D1236-01,sam,gold,08-Dec-2009,21 HaNassi,Tel Aviv,TA,6100001,D,VISION_B,premium,N,ignore_me
+FAM1236,SUB1236,V-D1236-02,dan,gold,02-Sep-2014,21 HaNassi,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1236,SUB1236,V-D1236-03,hila,gold,27-May-2012,21 HaNassi,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1237,SUB1237,V-E1237,ron,weiss,15-Feb-1970,4 King George,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1237,SUB1237,V-S1237,yoni,weiss,01-Feb-1963,4 King George,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1237,SUB1237,V-D1237-01,noa,weiss,07-Mar-2011,4 King George,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1238,SUB1238,V-E1238,adam,green,07-Feb-1956,48 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1238,SUB1238,V-D1238-01,itai,green,28-Feb-2010,48 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1238,SUB1238,V-D1238-02,sarah,green,02-Feb-2013,48 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1238,SUB1238,V-D1238-03,itai,green,19-Mar-2008,48 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1239,SUB1239,V-E1239,leah,biton,07-Jun-1966,93 King George,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1240,SUB1240,V-E1240,noa,gold,08-Oct-1994,36 Rothschild,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1240,SUB1240,V-S1240,yael,gold,16-Sep-1981,36 Rothschild,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1241,SUB1241,V-E1241,nina,peretz,08-Sep-1996,12 HaNassi,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1241,SUB1241,V-S1241,yoni,peretz,13-Jan-1989,12 HaNassi,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1241,SUB1241,V-D1241-01,yoni,peretz,18-Aug-2013,12 HaNassi,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1241,SUB1241,V-D1241-02,yoni,peretz,19-Jun-2015,12 HaNassi,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1241,SUB1241,V-D1241-03,tal,peretz,09-Jul-2013,12 HaNassi,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1242,SUB1242,V-E1242,ava,baron,17-Aug-1958,4 Allenby,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1242,SUB1242,V-S1242,nadav,baron,04-Mar-1969,4 Allenby,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1242,SUB1242,V-D1242-01,yasmin,baron,18-May-2011,4 Allenby,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1242,SUB1242,V-D1242-02,sarah,baron,19-Apr-2008,4 Allenby,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1243,SUB1243,V-E1243,nadav,katz,23-Dec-2006,46 Dizengoff,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1243,SUB1243,V-S1243,nadav,katz,23-Dec-1956,46 Dizengoff,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1243,SUB1243,V-D1243-01,dan,katz,07-Oct-2010,46 Dizengoff,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1244,SUB1244,V-E1244,noa,green,20-Apr-1958,70 HaNassi,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1244,SUB1244,V-S1244,tal,green,11-Jan-1985,70 HaNassi,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1244,SUB1244,V-D1244-01,lior,green,11-Mar-2011,70 HaNassi,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1245,SUB1245,V-E1245,sam,haddad,03-Jun-1988,19 Arlozorov,Tel Aviv,TA,6100001,E,VISION_A,basic,N,ignore_me
+FAM1245,SUB1245,V-S1245,hila,haddad,04-Oct-1980,19 Arlozorov,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1245,SUB1245,V-D1245-01,eli,haddad,05-Jun-2012,19 Arlozorov,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1245,SUB1245,V-D1245-02,zoe,haddad,16-Nov-2014,19 Arlozorov,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1246,SUB1246,V-E1246,ron,gold,08-Jun-2005,41 Dizengoff,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1246,SUB1246,V-S1246,sarah,gold,10-Jul-1966,41 Dizengoff,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1247,SUB1247,V-E1247,iris,cohen,13-Oct-1999,89 HaNassi,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1247,SUB1247,V-D1247-01,gadi,cohen,20-Mar-2008,89 HaNassi,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1247,SUB1247,V-D1247-02,eli,cohen,19-Nov-2011,89 HaNassi,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1248,SUB1248,V-E1248,liam,kaplan,06-Jun-1977,64 Dizengoff,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1248,SUB1248,V-S1248,liam,kaplan,22-Dec-2007,64 Dizengoff,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1248,SUB1248,V-D1248-01,idan,kaplan,01-Aug-2013,64 Dizengoff,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1248,SUB1248,V-D1248-02,adam,kaplan,23-Apr-2011,64 Dizengoff,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1249,SUB1249,V-E1249,iris,cohen,15-Jul-1958,45 HaNassi,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1249,SUB1249,V-D1249-01,zoe,cohen,13-Aug-2014,45 HaNassi,Tel Aviv,TA,6100001,D,VISION_A,basic,N,ignore_me
+FAM1249,SUB1249,V-D1249-02,dan,cohen,04-Jul-2016,45 HaNassi,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1250,SUB1250,V-E1250,liam,levi,11-Jan-1973,74 Ben Yehuda,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1251,SUB1251,V-E1251,matan,green,20-Oct-1976,21 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1252,SUB1252,V-E1252,zoe,gold,02-Mar-1982,4 King George,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1252,SUB1252,V-D1252-01,ron,gold,22-May-2016,4 King George,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1252,SUB1252,V-D1252-02,rina,gold,04-Apr-2012,4 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1252,SUB1252,V-D1252-03,noa,gold,18-Oct-2014,4 King George,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1253,SUB1253,V-E1253,nina,green,21-Nov-1973,20 Herzl St,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1253,SUB1253,V-S1253,omar,green,07-Jan-1961,20 Herzl St,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1254,SUB1254,V-E1254,yael,haddad,16-Jul-1974,82 HaNassi,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1254,SUB1254,V-S1254,hila,haddad,21-Feb-1971,82 HaNassi,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1255,SUB1255,V-E1255,leah,adler,02-Aug-1966,50 Dizengoff,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1255,SUB1255,V-S1255,itai,adler,27-Apr-1971,50 Dizengoff,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1255,SUB1255,V-D1255-01,adam,adler,25-Mar-2008,50 Dizengoff,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1256,SUB1256,V-E1256,dan,weiss,08-Oct-1981,86 Jaffa Rd,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1256,SUB1256,V-S1256,sarah,weiss,14-Sep-1979,86 Jaffa Rd,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1256,SUB1256,V-D1256-01,ron,weiss,08-Oct-2015,86 Jaffa Rd,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1257,SUB1257,V-E1257,david,levi,17-Oct-1987,39 Jaffa Rd,Rishon LeZion,RL,7530006,E,VISION_B,premium,Y,ignore_me
+FAM1257,SUB1257,V-D1257-01,hila,levi,25-Feb-2010,39 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1257,SUB1257,V-D1257-02,itai,levi,07-Mar-2010,39 Jaffa Rd,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1258,SUB1258,V-E1258,hila,biton,05-Nov-1967,17 Herzl St,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1258,SUB1258,V-D1258-01,adam,biton,26-Dec-2013,17 Herzl St,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1258,SUB1258,V-D1258-02,liam,biton,18-Jul-2009,17 Herzl St,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1259,SUB1259,V-E1259,tal,ben-david,20-Dec-1955,71 Allenby,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1259,SUB1259,V-S1259,yoni,ben-david,14-Feb-1981,71 Allenby,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1259,SUB1259,V-D1259-01,sam,ben-david,19-Oct-2010,71 Allenby,Rishon LeZion,RL,7530006,D,VISION_A,basic,Y,ignore_me
+FAM1259,SUB1259,V-D1259-02,nadav,ben-david,19-Feb-2009,71 Allenby,Rishon LeZion,RL,7530006,D,VISION_B,premium,Y,ignore_me
+FAM1260,SUB1260,V-E1260,matan,biton,21-Jul-1971,37 Ibn Gabirol,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1260,SUB1260,V-S1260,shira,biton,06-Jan-1985,37 Ibn Gabirol,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1260,SUB1260,V-D1260-01,adam,biton,20-Mar-2014,37 Ibn Gabirol,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1260,SUB1260,V-D1260-02,shira,biton,13-Jan-2014,37 Ibn Gabirol,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1261,SUB1261,V-E1261,yael,baron,11-Jan-1978,89 Ben Yehuda,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1261,SUB1261,V-D1261-02,yael,baron,05-Apr-2009,89 Ben Yehuda,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1262,SUB1262,V-E1262,eli,baron,20-Jul-2001,96 Rothschild,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1262,SUB1262,V-S1262,omar,baron,27-Apr-1983,96 Rothschild,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1263,SUB1263,V-E1263,liam,friedman,13-Sep-2000,8 Ibn Gabirol,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1263,SUB1263,V-S1263,david,friedman,01-Oct-1988,8 Ibn Gabirol,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1264,SUB1264,V-E1264,yasmin,levi,12-Jan-1984,25 Ben Yehuda,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1265,SUB1265,V-E1265,idan,haddad,08-Jan-1998,48 Rothschild,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1265,SUB1265,V-S1265,shira,haddad,28-Mar-1983,48 Rothschild,Haifa,HA,3320004,S,VISION_B,premium,Y,ignore_me
+FAM1266,SUB1266,V-E1266,zoe,baron,03-Dec-2002,76 Ibn Gabirol,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1266,SUB1266,V-S1266,leah,baron,28-Mar-1958,76 Ibn Gabirol,Rishon LeZion,RL,7530006,S,VISION_A,basic,Y,ignore_me
+FAM1267,SUB1267,V-E1267,hila,peretz,14-Nov-1972,28 Ben Yehuda,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1269,SUB1269,V-E1269,leah,adler,07-May-1984,91 HaNassi,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1269,SUB1269,V-S1269,hila,adler,13-Oct-1988,91 HaNassi,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1269,SUB1269,V-D1269-01,nadav,adler,17-Jan-2009,91 HaNassi,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1270,SUB1270,V-E1270,shira,friedman,04-Nov-1974,48 Ibn Gabirol,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1270,SUB1270,V-S1270,eli,friedman,11-Nov-1972,48 Ibn Gabirol,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1270,SUB1270,V-D1270-01,david,friedman,21-May-2012,48 Ibn Gabirol,Netanya,NT,4230008,D,VISION_A,basic,N,ignore_me
+FAM1270,SUB1270,V-D1270-02,tomer,friedman,05-Apr-2012,48 Ibn Gabirol,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM1271,SUB1271,V-E1271,yoni,gold,11-Nov-1980,98 Ben Yehuda,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1271,SUB1271,V-S1271,iris,gold,16-Nov-1956,98 Ben Yehuda,Petah Tikva,PT,4950007,S,VISION_B,premium,Y,ignore_me
+FAM1271,SUB1271,V-D1271-01,rina,gold,13-Jul-2012,98 Ben Yehuda,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1272,SUB1272,V-E1272,nadav,peretz,23-Dec-1976,95 Herzl St,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1272,SUB1272,V-S1272,ron,peretz,22-Aug-1995,95 Herzl St,Rishon LeZion,RL,7530006,S,VISION_B,premium,Y,ignore_me
+FAM1273,SUB1273,V-E1273,sarah,weiss,04-May-1966,65 HaNassi,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1273,SUB1273,V-S1273,iris,weiss,26-Dec-1971,65 HaNassi,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1274,SUB1274,V-E1274,matan,katz,08-Feb-1996,98 Dizengoff,Petah Tikva,PT,4950007,E,VISION_A,basic,Y,ignore_me
+FAM1274,SUB1274,V-S1274,iris,katz,26-Jul-1974,98 Dizengoff,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1275,SUB1275,V-E1275,itai,haddad,28-Jan-1985,48 HaNassi,Haifa,HA,3320004,E,VISION_A,basic,Y,ignore_me
+FAM1275,SUB1275,V-S1275,nadav,haddad,16-Feb-1994,48 HaNassi,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1276,SUB1276,V-E1276,leah,nissan,02-Jul-1974,65 Jaffa Rd,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1277,SUB1277,V-E1277,nadav,ben-david,28-Jun-1964,18 Ben Yehuda,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1278,SUB1278,V-E1278,zoe,katz,01-Jan-1995,63 Allenby,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1278,SUB1278,V-S1278,omar,katz,19-Mar-2003,63 Allenby,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1279,SUB1279,V-E1279,nina,hazan,14-Jul-1982,63 Jaffa Rd,Jerusalem,JM,9100002,E,VISION_A,basic,N,ignore_me
+FAM1279,SUB1279,V-D1279-01,leah,hazan,18-Jan-2008,63 Jaffa Rd,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1280,SUB1280,V-E1280,matan,katz,07-Sep-2003,94 Allenby,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1280,SUB1280,V-S1280,ava,katz,08-Dec-1995,94 Allenby,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1280,SUB1280,V-D1280-01,yasmin,katz,05-May-2013,94 Allenby,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1281,SUB1281,V-E1281,zoe,green,10-Jan-2007,50 Ibn Gabirol,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1281,SUB1281,V-D1281-01,itai,green,17-Oct-2016,50 Ibn Gabirol,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1282,SUB1282,V-E1282,matan,golan,06-Apr-1977,56 Dizengoff,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1282,SUB1282,V-D1282-01,lior,golan,08-Jan-2014,56 Dizengoff,Haifa,HA,3320004,D,VISION_A,basic,Y,ignore_me
+FAM1282,SUB1282,V-D1282-02,yasmin,golan,24-Apr-2010,56 Dizengoff,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1283,SUB1283,V-E1283,dan,hazan,13-Jan-2005,76 Ibn Gabirol,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1283,SUB1283,V-D1283-01,adam,hazan,02-Oct-2016,76 Ibn Gabirol,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1283,SUB1283,V-D1283-02,shira,hazan,04-Nov-2008,76 Ibn Gabirol,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1284,SUB1284,V-E1284,nina,ben-david,18-Feb-1979,3 Herzl St,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1284,SUB1284,V-S1284,tomer,ben-david,23-Apr-1964,3 Herzl St,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1285,SUB1285,V-E1285,hila,haddad,09-Sep-1997,81 Herzl St,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1285,SUB1285,V-S1285,tomer,haddad,27-Jul-1963,81 Herzl St,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1285,SUB1285,V-D1285-01,matan,haddad,24-Sep-2009,81 Herzl St,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1285,SUB1285,V-D1285-02,shira,haddad,04-May-2009,81 Herzl St,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1286,SUB1286,V-E1286,gadi,baron,12-Apr-1988,64 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1287,SUB1287,V-E1287,lior,peretz,11-Aug-1999,21 Herzl St,Haifa,HA,3320004,E,VISION_B,premium,Y,ignore_me
+FAM1287,SUB1287,V-S1287,ava,peretz,04-Feb-1997,21 Herzl St,Haifa,HA,3320004,S,VISION_A,basic,Y,ignore_me
+FAM1287,SUB1287,V-D1287-01,sarah,peretz,03-Mar-2015,21 Herzl St,Haifa,HA,3320004,D,VISION_B,premium,Y,ignore_me
+FAM1288,SUB1288,V-E1288,idan,kaplan,09-May-1984,10 Jaffa Rd,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1288,SUB1288,V-S1288,maya,kaplan,28-Mar-2007,10 Jaffa Rd,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1288,SUB1288,V-D1288-01,noa,kaplan,26-Jun-2012,10 Jaffa Rd,Petah Tikva,PT,4950007,D,VISION_A,basic,Y,ignore_me
+FAM1289,SUB1289,V-E1289,maya,levi,22-Mar-1955,41 King George,Netanya,NT,4230008,E,VISION_B,premium,Y,ignore_me
+FAM1289,SUB1289,V-S1289,eli,levi,20-Aug-1977,41 King George,Netanya,NT,4230008,S,VISION_B,premium,Y,ignore_me
+FAM1289,SUB1289,V-D1289-01,adam,levi,27-Jun-2009,41 King George,Netanya,NT,4230008,D,VISION_A,basic,Y,ignore_me
+FAM1290,SUB1290,V-E1290,tomer,golan,21-Jul-2006,59 HaNassi,Rishon LeZion,RL,7530006,E,VISION_A,basic,Y,ignore_me
+FAM1291,SUB1291,V-E1291,noa,mizrahi,19-Jul-1961,15 Dizengoff,Jerusalem,JM,9100002,E,VISION_A,basic,Y,ignore_me
+FAM1291,SUB1291,V-S1291,nadav,mizrahi,06-Aug-1998,15 Dizengoff,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1291,SUB1291,V-D1291-01,shira,mizrahi,20-Jun-2014,15 Dizengoff,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1291,SUB1291,V-D1291-02,ava,mizrahi,16-Aug-2010,15 Dizengoff,Jerusalem,JM,9100002,D,VISION_A,basic,Y,ignore_me
+FAM1291,SUB1291,V-D1291-03,maya,mizrahi,02-Aug-2014,15 Dizengoff,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1292,SUB1292,V-E1292,david,nissan,28-Nov-2011,34 Allenby,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1292,SUB1292,V-S1292,tal,nissan,20-Dec-1999,34 Allenby,Tel Aviv,TA,6100001,S,VISION_A,basic,Y,ignore_me
+FAM1293,SUB1293,V-E1293,hila,hazan,27-Mar-1979,56 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1293,SUB1293,V-D1293-01,matan,hazan,21-Jan-2008,56 Ben Yehuda,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1294,SUB1294,V-E1294,david,mizrahi,11-Aug-1959,65 Rothschild,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1294,SUB1294,V-S1294,adam,mizrahi,08-Sep-1958,65 Rothschild,Jerusalem,JM,9100002,S,VISION_A,basic,Y,ignore_me
+FAM1295,SUB1295,V-E1295,yasmin,green,26-Aug-1984,83 King George,Petah Tikva,PT,4950007,E,VISION_B,premium,Y,ignore_me
+FAM1295,SUB1295,V-S1295,liam,green,11-Aug-1986,83 King George,Petah Tikva,PT,4950007,S,VISION_A,basic,Y,ignore_me
+FAM1296,SUB1296,V-E1296,nina,levi,01-Sep-1990,64 Herzl St,Tel Aviv,TA,6100001,E,VISION_A,basic,Y,ignore_me
+FAM1296,SUB1296,V-D1296-01,yoni,levi,18-Sep-2012,64 Herzl St,Tel Aviv,TA,6100001,D,VISION_B,premium,Y,ignore_me
+FAM1297,SUB1297,V-E1297,dan,levi,28-Apr-2007,84 Rothschild,Jerusalem,JM,9100002,E,VISION_B,premium,Y,ignore_me
+FAM1297,SUB1297,V-S1297,ron,levi,20-Oct-2004,84 Rothschild,Jerusalem,JM,9100002,S,VISION_B,premium,Y,ignore_me
+FAM1297,SUB1297,V-D1297-01,yael,levi,15-Dec-2013,84 Rothschild,Jerusalem,JM,9100002,D,VISION_B,premium,Y,ignore_me
+FAM1298,SUB1298,V-E1298,dan,hazan,17-Sep-2012,13 Ben Yehuda,Tel Aviv,TA,6100001,E,VISION_B,premium,Y,ignore_me
+FAM1298,SUB1298,V-S1298,maya,hazan,16-Mar-1957,13 Ben Yehuda,Tel Aviv,TA,6100001,S,VISION_B,premium,Y,ignore_me
+FAM1298,SUB1298,V-D1298-01,sam,hazan,09-Feb-2014,13 Ben Yehuda,Tel Aviv,TA,6100001,D,VISION_A,basic,Y,ignore_me
+FAM1299,SUB1299,V-D1299-01,tomer,azulai,25-Feb-2013,26 Ben Yehuda,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1299,SUB1299,V-D1299-02,nina,azulai,27-Nov-2008,26 Ben Yehuda,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1299,SUB1299,V-D1299-03,hila,azulai,15-Aug-2009,26 Ben Yehuda,Petah Tikva,PT,4950007,D,VISION_B,premium,Y,ignore_me
+FAM1300,SUB1300,V-E1300,yael,cohen,02-Dec-1988,76 Ibn Gabirol,Netanya,NT,4230008,E,VISION_A,basic,Y,ignore_me
+FAM1300,SUB1300,V-S1300,nina,cohen,17-Aug-1992,76 Ibn Gabirol,Netanya,NT,4230008,S,VISION_A,basic,Y,ignore_me
+FAM1300,SUB1300,V-D1300-01,gadi,cohen,19-Dec-2010,76 Ibn Gabirol,Netanya,NT,4230008,D,VISION_B,premium,Y,ignore_me
+FAM_VONLY_000,SUB_VONLY_000,V-ONLY000,sam,onlyvision,06-Nov-2013,6 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_001,SUB_VONLY_001,V-ONLY001,matan,onlyvision,05-Feb-2009,62 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_002,SUB_VONLY_002,V-ONLY002,sam,onlyvision,10-Dec-2008,17 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_003,SUB_VONLY_003,V-ONLY003,yasmin,onlyvision,24-Oct-2013,31 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_004,SUB_VONLY_004,V-ONLY004,ron,onlyvision,25-Apr-2010,11 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_005,SUB_VONLY_005,V-ONLY005,maya,onlyvision,07-Apr-2012,53 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_006,SUB_VONLY_006,V-ONLY006,iris,onlyvision,13-Jul-1959,80 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_007,SUB_VONLY_007,V-ONLY007,hila,onlyvision,10-Aug-1997,40 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_008,SUB_VONLY_008,V-ONLY008,noa,onlyvision,16-Oct-1981,63 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_009,SUB_VONLY_009,V-ONLY009,tal,onlyvision,20-Feb-1962,92 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_010,SUB_VONLY_010,V-ONLY010,yoni,onlyvision,03-Jun-1992,15 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_011,SUB_VONLY_011,V-ONLY011,ron,onlyvision,16-Jun-1962,59 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_012,SUB_VONLY_012,V-ONLY012,noa,onlyvision,19-Apr-1963,26 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_013,SUB_VONLY_013,V-ONLY013,idan,onlyvision,11-Feb-1986,48 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_014,SUB_VONLY_014,V-ONLY014,zoe,onlyvision,01-Jul-1988,52 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_015,SUB_VONLY_015,V-ONLY015,leah,onlyvision,07-Mar-1974,23 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_016,SUB_VONLY_016,V-ONLY016,yoni,onlyvision,11-May-2001,66 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_017,SUB_VONLY_017,V-ONLY017,tomer,onlyvision,10-Dec-1989,49 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_018,SUB_VONLY_018,V-ONLY018,omar,onlyvision,28-Oct-2002,58 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me
+FAM_VONLY_019,SUB_VONLY_019,V-ONLY019,idan,onlyvision,15-May-1959,71 Nowhere,Nowhere,NW,00000,E,VISION_A,basic,Y,ignore_me

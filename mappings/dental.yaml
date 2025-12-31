@@ -1,0 +1,33 @@
+source_vendor: dental
+file: dental_provider.xlsx
+sheet: eligibility
+format: xlsx
+
+constants:
+  source_vendor: dental
+  plan_type: dental
+  provider: dental
+
+mapping:
+  group_id_raw: GroupID
+  subscriber_id_raw: SubscriberID
+  person_id_raw: PersonID
+  first_name_raw: FirstName
+  last_name_raw: LastName
+  dob_raw: DOB
+  relationship_raw: Relation
+  address_line1: Addr1
+  city: City
+  state: State
+  zip: Zip
+  plan_id: DentalPlan
+  plan_tier: Tier
+  is_active_raw: Active
+
+nulls:
+  dependent_seq_raw: null
+  ssn_hash_raw: null
+
+extra_payload:
+  - UnusedInternal1
+  - UnusedInternal2

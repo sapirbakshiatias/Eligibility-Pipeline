@@ -1,0 +1,31 @@
+source_vendor: vision
+file: vision_provider.csv
+format: csv
+
+constants:
+  source_vendor: vision
+  plan_type: vision
+  provider: vision
+
+mapping:
+  group_id_raw: acct
+  subscriber_id_raw: sub_id
+  person_id_raw: member_no
+  first_name_raw: fname
+  last_name_raw: lname
+  dob_raw: dob
+  relationship_raw: rel
+  address_line1: addr
+  city: cty
+  state: st
+  zip: zip
+  plan_id: vision_plan
+  plan_tier: vision_tier
+  is_active_raw: eligible_ind
+
+nulls:
+  dependent_seq_raw: null
+  ssn_hash_raw: null
+
+extra_payload:
+  - internal_debug

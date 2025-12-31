@@ -1,0 +1,38 @@
+source_vendor: medical_c
+file: medical_provider_c.jsonl
+format: jsonl
+
+constants:
+  source_vendor: medical_c
+  plan_type: medical
+  provider: medical_c
+
+mapping:
+  subscriber_id_raw: emp_id
+  dependent_seq_raw: dep_num
+  person_id_raw: member_identifier
+  first_name_raw: name.first
+  last_name_raw: name.last
+  relationship_raw: person_type
+  address_line1: address.line1
+  city: address.city
+  state: address.state
+  zip: address.zip
+  plan_id: plan.plan_id
+  plan_tier: plan.tier
+  is_active_raw: eligibility
+
+nulls:
+  group_id_raw: null
+  ssn_hash_raw: null
+
+derivations:
+  dob_raw:
+    type: join_ymd_to_string
+    year: dob_year
+    month: dob_month
+    day: dob_day
+    output_format: "YYYY-MM-DD"   # just building a string, parsing happens later
+
+extra_payload:
+  - internal_notes
