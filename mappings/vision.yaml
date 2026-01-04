@@ -1,31 +1,50 @@
-source_vendor: vision
-file: vision_provider.csv
-format: csv
+# --- Metadata ---
+source_vendor: "vision_provider"
+source_file: "vision_provider.csv"
+plan_type: "vision" #
+provider: "Vision Provider Inc"
 
-constants:
-  source_vendor: vision
-  plan_type: vision
-  provider: vision
+# --- File Specs ---
+file_format: "csv"
+# Date format: DD-Mon-YYYY (e.g., 01-Jan-1990)
+dob_format: "%d-%b-%Y" 
 
-mapping:
-  group_id_raw: acct
-  subscriber_id_raw: sub_id
-  person_id_raw: member_no
-  first_name_raw: fname
-  last_name_raw: lname
-  dob_raw: dob
-  relationship_raw: rel
-  address_line1: addr
-  city: cty
-  state: st
-  zip: zip
-  plan_id: vision_plan
-  plan_tier: vision_tier
-  is_active_raw: eligible_ind
+# --- Column Mapping (Exact Source -> Your Staging Column) ---
+column_mapping:
+  # Family/Subscriber Identity
+  # Note: Vision often uses acct as the group and sub_id as the family anchor
+  acct: "group_id_raw" 
+  sub_id: "subscriber_id_raw"
+  member_no: "person_id_raw"
+  
+  # Demographics
+  fname: "first_name_raw"
+  lname: "last_name_raw"
+  dob: "dob_raw"
+  rel: "relationship_raw"
+  
+  # Address
+  addr: "address_line1"
+  cty: "city"
+  st: "state"
+  zip: "zip"
+  
+  # Plan Details
+  vision_plan: "plan_id"
+  vision_tier: "plan_tier"
+  eligible_ind: "is_active_raw"
 
-nulls:
-  dependent_seq_raw: null
-  ssn_hash_raw: null
+# --- Internal Fields ---
+# Moved to extra_payload JSON
+internal_fields:
+  - "internal_debug"
 
-extra_payload:
-  - internal_debug
+# --- Technical Columns (Calculated) ---
+pipeline_columns:
+  - "source_row"
+  - "load_run_id"
+  - "ingested_at"
+  - "source_extract_date"
+  - "record_hash_raw"
+  - "extra_payload"
+

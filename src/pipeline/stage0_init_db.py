@@ -14,7 +14,8 @@ def init_db(root: Path) -> Path:
 
     ddl_paths = [
         sql_dir / "01_create_raw_staging.sql",
-        sql_dir / "02_create_raw_staging_payload.sql",  # NEW
+        sql_dir / "02_create_raw_staging_payload.sql",
+        sql_dir / "03_create_silver_members.sql",
     ]
     # 2) Ensure output/ exists
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -23,36 +24,28 @@ def init_db(root: Path) -> Path:
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
 
-    # 4) Load and run the DDL script (can contain multiple SQL statements)
-    # Run all DDL scripts (in order)
+    # 4) Load and run the DDL scripts
     for ddl_path in ddl_paths:
+        if not ddl_path.exists():
+            raise FileNotFoundError(f"Missing DDL script: {ddl_path}")
         ddl_sql = ddl_path.read_text(encoding="utf-8")
         cur.executescript(ddl_sql)
 
     conn.commit()
 
-    # 5) Verify the raw_staging + raw_staging_payload  table exists
+    # 5) Consolidated Verification
     def _table_exists(cursor: sqlite3.Cursor, table_name: str) -> bool:
-        cursor.execute("""
-            SELECT 1
-            FROM sqlite_master
-            WHERE type='table' AND name=?;
-        """, (table_name,))
+        cursor.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?;", (table_name,))
         return cursor.fetchone() is not None
 
-    raw_exists = _table_exists(cur, "raw_staging")
-    payload_exists = _table_exists(cur, "raw_staging_payload")
+    missing_tables = []
+    for table in ["raw_staging", "raw_staging_payload"]:
+        if not _table_exists(cur, table):
+            missing_tables.append(table)
 
-    if not payload_exists:
-        raise RuntimeError("raw_staging_payload was not created. Check sql/02_create_raw_staging_payload.sql")
-
-    # 6) close the DB connection
     conn.close()
 
-    if not raw_exists:
-        raise RuntimeError("raw_staging was not created. Check sql/01_create_raw_staging.sql")
-
-    if not payload_exists:
-        raise RuntimeError("raw_staging_payload was not created. Check sql/02_create_raw_staging_payload.sql")
+    if missing_tables:
+        raise RuntimeError(f"The following tables were not created: {', '.join(missing_tables)}")
 
     return db_path

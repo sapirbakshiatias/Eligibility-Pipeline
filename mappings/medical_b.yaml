@@ -1,33 +1,43 @@
-source_vendor: medical_b
-file: medical_provider_b.txt
-format: pipe_delimited
-delimiter: "|"
+# --- Metadata ---
+source_vendor: "medical_provider_b"
+source_file: "medical_provider_b.txt" #
+plan_type: "medical" #
+provider: "Medical Provider B"
 
-constants:
-  source_vendor: medical_b
-  plan_type: medical
-  provider: medical_b
+# --- File Specs ---
+file_format: "txt"
+delimiter: "|" # Confirmed by sample data: family_group|ssn_hash...
+dob_format: "%Y%m%d" # Confirmed by sample data: 19631204, 19890219
 
-mapping:
-  group_id_raw: family_group
-  person_id_raw: vendor_member_key
-  ssn_hash_raw: ssn_hash
-  first_name_raw: given_name
-  last_name_raw: surname
-  dob_raw: birth_dt
-  relationship_raw: relation
-  address_line1: street
-  city: town
-  state: province
-  zip: postal
-  plan_id: med_plan
-  plan_tier: tier
-  is_active_raw: active_flag
+# --- Column Mapping (Exact Source -> Your Staging Column) ---
+column_mapping:
+  family_group: "subscriber_id_raw" # Acts as the family anchor
+  ssn_hash: "ssn_hash_raw" # Present in Medical B sample
+  vendor_member_key: "person_id_raw" # Unique member key
+  given_name: "first_name_raw" #
+  surname: "last_name_raw" #
+  birth_dt: "dob_raw" #
+  street: "address_line1" #
+  town: "city" #
+  province: "state" #
+  postal: "zip" #
+  relation: "relationship_raw" #
+  med_plan: "plan_id" #
+  tier: "plan_tier" #
+  active_flag: "is_active_raw" #
 
-nulls:
-  subscriber_id_raw: null
-  dependent_seq_raw: null
+# --- Internal Fields ---
+# These exist in source but will move to extra_payload JSON
+internal_fields:
+  - "audit_source_system"
+  - "audit_load_ts"
 
-extra_payload:
-  - audit_source_system
-  - audit_load_ts
+# --- Technical Columns (Calculated by Pipeline) ---
+pipeline_columns:
+  - "source_row"
+  - "load_run_id"
+  - "ingested_at"
+  - "source_extract_date"
+  - "record_hash_raw"
+  - "extra_payload"
+

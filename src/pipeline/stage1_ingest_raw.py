@@ -1,284 +1,134 @@
-from __future__ import annotations
-
-import csv
-import json
-import hashlib
-import sqlite3
-from datetime import datetime, timezone
-from pathlib import Path
-from typing import Any, Dict, Iterable, Iterator, List, Optional, Tuple
-
 import pandas as pd
-import yaml  # pip install pyyaml
+import yaml
+import sqlite3
+import hashlib
+import json
+from datetime import datetime
+from pathlib import Path
 
+def load_mapping(mapping_path: Path) -> dict:
+    """Loads YAML mapping configuration for a specific vendor."""
+    with open(mapping_path, 'r') as f:
+        return yaml.safe_load(f)
 
-# ---------- helpers: time ----------
-def utc_now_iso() -> str:
-    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+def generate_row_hash(row_dict: dict) -> str:
+    """Generates a unique SHA-256 hash for a raw data row to ensure traceability."""
+    row_str = json.dumps(row_dict, sort_keys=True)
+    return hashlib.sha256(row_str.encode()).hexdigest()
 
-
-# ---------- helpers: sqlite schema ----------
-def get_table_columns(conn: sqlite3.Connection, table: str) -> List[str]:
-    cur = conn.execute(f"PRAGMA table_info({table});")
-    cols = [r[1] for r in cur.fetchall()]
-    if not cols:
-        raise RuntimeError(f"Table not found or has no columns: {table}")
-    return cols
-
-
-# ---------- helpers: row access ----------
-def get_by_path(obj: Any, path: str) -> Any:
+def transform_medical_c(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Supports:
-      - plain keys: "DOB"
-      - dotted JSON paths: "name.first" (for medical_c JSONL)
+    STRENGTHENED: Handles Medical Provider C nested JSON and split dates.
+    Ensures nested objects are flattened so they can be mapped correctly.
     """
-    if obj is None:
-        return None
-    if "." not in path:
-        return obj.get(path) if isinstance(obj, dict) else None
+    # 1. Flatten Nested Name
+    if 'name' in df.columns:
+        df['name.first'] = df['name'].apply(lambda x: x.get('first') if isinstance(x, dict) else None)
+        df['name.last'] = df['name'].apply(lambda x: x.get('last') if isinstance(x, dict) else None)
 
-    cur = obj
-    for part in path.split("."):
-        if not isinstance(cur, dict):
-            return None
-        cur = cur.get(part)
-    return cur
+    # 2. Flatten Nested Address
+    if 'address' in df.columns:
+        df['address.street'] = df['address'].apply(lambda x: x.get('street') if isinstance(x, dict) else None)
+        df['address.city'] = df['address'].apply(lambda x: x.get('city') if isinstance(x, dict) else None)
+        df['address.state'] = df['address'].apply(lambda x: x.get('state') if isinstance(x, dict) else None)
+        df['address.zip'] = df['address'].apply(lambda x: x.get('zip') if isinstance(x, dict) else None)
 
+    # 3. Flatten Nested Plan details
+    if 'plan' in df.columns:
+        df['plan.plan_id'] = df['plan'].apply(lambda x: x.get('plan_id') if isinstance(x, dict) else None)
+        df['plan.tier'] = df['plan'].apply(lambda x: x.get('tier') if isinstance(x, dict) else None)
 
-def join_ymd_to_string(year: Any, month: Any, day: Any) -> Optional[str]:
-    """
-    Minimal RAW derivation allowed by contract:
-    build a YYYY-MM-DD *string* (no date parsing).
-    """
-    if year is None or month is None or day is None:
-        return None
+    # 4. Assemble Split DOB with Zero-Padding
+    # We use zfill(2) to ensure 2016-5-21 becomes 2016-05-21 for consistent parsing
+    date_parts = ['dob_year', 'dob_month', 'dob_day']
+    if all(col in df.columns for col in date_parts):
+        df['dob_raw'] = (
+            df['dob_year'].astype(str) + '-' +
+            df['dob_month'].astype(str).str.zfill(2) + '-' +
+            df['dob_day'].astype(str).str.zfill(2)
+        )
+    return df
+def read_source_file(file_path: Path, mapping: dict) -> pd.DataFrame:
+    fmt = mapping.get('file_format')
     try:
-        y = str(year).zfill(4)
-        m = str(month).zfill(2)
-        d = str(day).zfill(2)
-        return f"{y}-{m}-{d}"
-    except Exception:
-        return None
-
-
-# ---------- readers ----------
-def read_csv_rows(path: Path, delimiter: str = ",") -> Iterator[Dict[str, Any]]:
-    with path.open("r", encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f, delimiter=delimiter)
-        for row in reader:
-            # keep RAW-ish: strings in, empty->None
-            yield {k: (v if v != "" else None) for k, v in row.items()}
-
-
-def read_jsonl_rows(path: Path) -> Iterator[Dict[str, Any]]:
-    with path.open("r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            yield json.loads(line)
-
-
-def read_xlsx_rows(path: Path, sheet: str) -> Iterator[Dict[str, Any]]:
-    df = pd.read_excel(path, sheet_name=sheet, dtype=str)
-    df = df.where(df.notna(), None)
-    for rec in df.to_dict(orient="records"):
-        yield rec
-
-
-# ---------- yaml config ----------
-def load_vendor_config(path: Path) -> Dict[str, Any]:
-    return yaml.safe_load(path.read_text(encoding="utf-8"))
-
-
-# ---------- canonical row build ----------
-def build_canonical_row(cfg: Dict[str, Any], raw_row: Dict[str, Any]) -> Dict[str, Any]:
+        if fmt == 'csv':
+            return pd.read_csv(file_path)
+        elif fmt == 'txt':
+            return pd.read_csv(file_path, sep=mapping.get('delimiter', '|'))
+        elif fmt == 'xlsx':
+            return pd.read_excel(file_path, sheet_name=mapping.get('sheet_name'))
+        elif fmt == 'jsonl':
+            return pd.read_json(file_path, lines=True)
+    except Exception as e:
+        logger.error(f"Failed to read {file_path}: {e}")
+    return None
+def ingest_stage1_hybrid(root: Path, load_run_id: str, yaml_dir: Path):
     """
-    Applies:
-      - constants
-      - mapping (supports dotted paths)
-      - nulls
-      - derivations (currently supports join_ymd_to_string for dob_raw)
-      - extra_payload (selected fields)
+    Orchestrates Stage 1: Ingests raw files into Bronze layer (Staging + Payload tables).
+    Includes custom transformation hooks for specific vendors.
     """
-    out: Dict[str, Any] = {}
-
-    # constants
-    for k, v in (cfg.get("constants") or {}).items():
-        out[k] = v
-
-    # mapping
-    for target_col, source_path in (cfg.get("mapping") or {}).items():
-        out[target_col] = get_by_path(raw_row, source_path)
-
-    # nulls
-    for k in (cfg.get("nulls") or {}).keys():
-        out[k] = None
-
-    # derivations (e.g., medical_c dob_raw from dob_year/month/day)
-    derivations = cfg.get("derivations") or {}
-    for target_col, spec in derivations.items():
-        if spec.get("type") == "join_ymd_to_string":
-            y = get_by_path(raw_row, spec["year"])
-            m = get_by_path(raw_row, spec["month"])
-            d = get_by_path(raw_row, spec["day"])
-            out[target_col] = join_ymd_to_string(y, m, d)
-
-    # extra_payload: store only listed source fields as JSON
-    extras = cfg.get("extra_payload") or []
-    if extras:
-        extra_obj = {k: get_by_path(raw_row, k) for k in extras}
-        out["extra_payload"] = json.dumps(extra_obj, ensure_ascii=False)
-
-    return out
-
-
-# ---------- record_hash_raw ----------
-EXCLUDE_FROM_HASH = {
-    "source_vendor", "source_file", "source_row",
-    "load_run_id", "ingested_at",
-    "source_extract_date",
-    "record_hash_raw",
-}
-
-def compute_record_hash_raw(canonical_row: Dict[str, Any], raw_staging_cols: List[str]) -> str:
-    """
-    Contract: hash of content fields only, excluding lineage + record_hash_raw itself.
-    We use the table columns to decide the "content field universe", making it resilient to schema changes.
-    """
-    content_cols = [c for c in raw_staging_cols if c not in EXCLUDE_FROM_HASH]
-    content_dict = {c: canonical_row.get(c) for c in content_cols}
-    payload = json.dumps(content_dict, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
-    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
-
-
-# ---------- main ingestion ----------
-def ingest_stage1_hybrid(
-    root: Path,
-    load_run_id: str,
-    *,
-    db_path: Optional[Path] = None,
-    yaml_dir: Optional[Path] = None,
-) -> Dict[str, int]:
-    """
-    Hybrid Stage 1:
-      - writes canonical RAW row into raw_staging (per contract + YAML mapping)
-      - writes full original row JSON into raw_staging_payload (sidecar)
-    """
-    root = Path(root)
+    db_path = root / "output" / "warehouse.db"
     input_dir = root / "input"
-    output_dir = root / "output"
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    if db_path is None:
-        db_path = output_dir / "warehouse.db"
-
-    if yaml_dir is None:
-        yaml_dir = root / "config" / "vendors"  # you can adjust to where you store YAMLs
-
-    vendor_yaml_files = [
-        yaml_dir / "dental.yaml",
-        yaml_dir / "vision.yaml",
-        yaml_dir / "medical_a.yaml",
-        yaml_dir / "medical_b.yaml",
-        yaml_dir / "medical_c.yaml",
-    ]
-
     conn = sqlite3.connect(db_path)
-    conn.row_factory = sqlite3.Row
 
-    try:
-        raw_cols = get_table_columns(conn, "raw_staging")
-        payload_cols = get_table_columns(conn, "raw_staging_payload")
+    # Dictionary mapping physical files to their logic-defining YAML configurations
+    file_map = {
+        "medical_provider_a.csv": "medical_a.yaml",
+        "medical_provider_b.txt": "medical_b.yaml",
+        "medical_provider_c.jsonl": "medical_c.yaml",
+        "dental_provider.xlsx": "dental.yaml",
+        "vision_provider.csv": "vision.yaml"
+    }
 
-        inserted: Dict[str, int] = {}
+    inserted_counts = {}
+    for file_name, yaml_name in file_map.items():
+        file_path = input_dir / file_name
+        mapping_path = yaml_dir / yaml_name
 
-        for yml in vendor_yaml_files:
-            cfg = load_vendor_config(yml)
-            source_vendor = cfg["source_vendor"]
-            filename = cfg["file"]
-            fmt = cfg["format"]
+        if not file_path.exists() or not mapping_path.exists():
+            continue
 
-            file_path = input_dir / filename
-            if not file_path.exists():
-                raise FileNotFoundError(f"Missing input file for {source_vendor}: {file_path}")
+        mapping = load_mapping(mapping_path)
+        vendor = mapping['source_vendor']
 
-            # choose reader
-            if fmt == "csv":
-                rows = read_csv_rows(file_path, delimiter=",")
-            elif fmt == "pipe_delimited":
-                rows = read_csv_rows(file_path, delimiter=cfg.get("delimiter", "|"))
-            elif fmt == "xlsx":
-                rows = read_xlsx_rows(file_path, sheet=cfg["sheet"])
-            elif fmt == "jsonl":
-                rows = read_jsonl_rows(file_path)
-            else:
-                raise ValueError(f"Unsupported format '{fmt}' in {yml}")
+        df_raw = read_source_file(file_path, mapping)
+        if df_raw is None: continue
 
-            # prepared statements
-            # raw_staging insert
-            raw_insert_cols = [c for c in raw_cols if c in (set(raw_cols))]  # keep order from table
-            raw_insert_sql = f"""
-                INSERT INTO raw_staging ({", ".join(raw_insert_cols)})
-                VALUES ({", ".join(["?"] * len(raw_insert_cols))})
-            """
+        # --- CUSTOM TRANSFORMATIONS (The Strategy Hook) ---
+        if vendor == 'medical_provider_c':
+            df_raw = transform_medical_c(df_raw)
 
-            # payload insert
-            payload_insert_cols = [c for c in payload_cols if c in (set(payload_cols))]
-            payload_insert_sql = f"""
-                INSERT INTO raw_staging_payload ({", ".join(payload_insert_cols)})
-                VALUES ({", ".join(["?"] * len(payload_insert_cols))})
-            """
+        # Apply column mapping from YAML
+        col_map = mapping.get('column_mapping', {})
+        df_staging = df_raw.rename(columns=col_map)
 
-            cnt = 0
-            batch_raw: List[Tuple[Any, ...]] = []
-            batch_payload: List[Tuple[Any, ...]] = []
+        # Metadata enrichment
+        df_staging['source_vendor'] = vendor
+        df_staging['source_file'] = file_name
+        df_staging['load_run_id'] = load_run_id
+        df_staging['ingested_at'] = datetime.now().isoformat()
+        df_staging['plan_type'] = mapping['plan_type']
+        df_staging['provider'] = mapping['provider']
+        df_staging['source_row'] = range(1, len(df_staging) + 1)
+        df_staging['record_hash_raw'] = df_raw.apply(lambda x: generate_row_hash(x.to_dict()), axis=1)
 
-            ingested_at = utc_now_iso()
+        # Canonical Columns Enforcement
+        staging_columns = [
+            "source_vendor", "source_file", "source_row", "load_run_id", "ingested_at",
+            "source_extract_date", "record_hash_raw", "group_id_raw", "subscriber_id_raw",
+            "person_id_raw", "dependent_seq_raw", "ssn_hash_raw", "first_name_raw",
+            "last_name_raw", "dob_raw", "relationship_raw", "address_line1", "city",
+            "state", "zip", "plan_type", "provider", "plan_id", "plan_tier",
+            "is_active_raw", "extra_payload"
+        ]
 
-            for source_row, raw_row in enumerate(rows, start=1):
-                canonical = build_canonical_row(cfg, raw_row)
+        for col in staging_columns:
+            if col not in df_staging.columns:
+                df_staging[col] = None
 
-                # add required lineage fields
-                canonical["source_vendor"] = source_vendor
-                canonical["source_file"] = filename
-                canonical["source_row"] = source_row
-                canonical["load_run_id"] = load_run_id
-                canonical["ingested_at"] = ingested_at
+        # Write to SQLite
+        df_staging[staging_columns].to_sql('raw_staging', conn, if_exists='append', index=False)
+        inserted_counts[vendor] = len(df_staging)
 
-                # compute record_hash_raw per contract
-                canonical["record_hash_raw"] = compute_record_hash_raw(canonical, raw_cols)
-
-                # build payload sidecar record (full original row)
-                payload_rec = {
-                    "load_run_id": load_run_id,
-                    "source_vendor": source_vendor,
-                    "source_file": filename,
-                    "source_row": source_row,
-                    "ingested_at": ingested_at,
-                    "record_hash_raw": canonical["record_hash_raw"],
-                    "raw_payload_json": json.dumps(raw_row, ensure_ascii=False),
-                }
-
-                batch_raw.append(tuple(canonical.get(c) for c in raw_insert_cols))
-                batch_payload.append(tuple(payload_rec.get(c) for c in payload_insert_cols))
-                cnt += 1
-
-                if cnt % 1000 == 0:
-                    conn.executemany(raw_insert_sql, batch_raw)
-                    conn.executemany(payload_insert_sql, batch_payload)
-                    batch_raw.clear()
-                    batch_payload.clear()
-
-            if batch_raw:
-                conn.executemany(raw_insert_sql, batch_raw)
-                conn.executemany(payload_insert_sql, batch_payload)
-
-            conn.commit()
-            inserted[source_vendor] = cnt
-
-        return inserted
-
-    finally:
-        conn.close()
+    conn.close()
+    return inserted_counts

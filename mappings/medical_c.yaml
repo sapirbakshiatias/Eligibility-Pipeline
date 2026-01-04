@@ -1,38 +1,56 @@
-source_vendor: medical_c
-file: medical_provider_c.jsonl
-format: jsonl
+# --- Metadata ---
+source_vendor: "medical_provider_c"
+source_file: "medical_provider_c.jsonl" #
+plan_type: "medical" #
+provider: "Medical Provider C"
 
-constants:
-  source_vendor: medical_c
-  plan_type: medical
-  provider: medical_c
+# --- File Specs ---
+file_format: "jsonl" #
+# Special handling for split DOB: year, month, day
+dob_type: "split"
+dob_fields:
+  year: "dob_year"
+  month: "dob_month"
+  day: "dob_day"
 
-mapping:
-  subscriber_id_raw: emp_id
-  dependent_seq_raw: dep_num
-  person_id_raw: member_identifier
-  first_name_raw: name.first
-  last_name_raw: name.last
-  relationship_raw: person_type
-  address_line1: address.line1
-  city: address.city
-  state: address.state
-  zip: address.zip
-  plan_id: plan.plan_id
-  plan_tier: plan.tier
-  is_active_raw: eligibility
+# --- Column Mapping (Exact Source -> Your Staging Column) ---
+# Note: Using dot notation for nested JSON fields
+column_mapping:
+  # IDs
+  emp_id: "subscriber_id_raw"
+  member_identifier: "person_id_raw"
+  dep_num: "dependent_seq_raw" # Perfect match for your dependent_seq_raw
+  
+  # Name (Nested)
+  "name.first": "first_name_raw"
+  "name.last": "last_name_raw"
+  
+  # Relationship
+  person_type: "relationship_raw"
+  
+  # Address (Nested)
+  "address.street": "address_line1"
+  "address.city": "city"
+  "address.state": "state"
+  "address.zip": "zip"
+  
+  # Plan (Nested)
+  "plan.plan_id": "plan_id"
+  "plan.tier": "plan_tier"
+  
+  # Status
+  eligibility: "is_active_raw"
 
-nulls:
-  group_id_raw: null
-  ssn_hash_raw: null
+# --- Internal Fields ---
+# To be stored in extra_payload JSON
+internal_fields:
+  - "internal_notes"
 
-derivations:
-  dob_raw:
-    type: join_ymd_to_string
-    year: dob_year
-    month: dob_month
-    day: dob_day
-    output_format: "YYYY-MM-DD"   # just building a string, parsing happens later
-
-extra_payload:
-  - internal_notes
+# --- Technical Columns ---
+pipeline_columns:
+  - "source_row"
+  - "load_run_id"
+  - "ingested_at"
+  - "source_extract_date"
+  - "record_hash_raw"
+  - "extra_payload"

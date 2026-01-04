@@ -1,41 +1,40 @@
 from pathlib import Path
-
+import logging
 from pipeline.stage0_init_db import init_db
 from pipeline.stage0_manifest import generate_load_run_id, build_staging_manifest
 from pipeline.stage1_ingest_raw import ingest_stage1_hybrid
+from pipeline.stage2_clean_silver import run_stage2_cleaning
 
+logger = logging.getLogger(__name__)
 
-def main(root: Path) -> None:
+def main(root: Path) -> str:
     """
-    Orchestrate the pipeline end-to-end for a single run.
-
-    Stages:
-      - Stage 0: Initialize SQLite warehouse + required staging tables
-      - Stage 0b: Build a staging manifest (lineage/observability)
-      - Stage 1: Hybrid ingestion:
-          * Write canonical RAW fields into raw_staging (per YAML mappings)
-          * Write full original rows as JSON into raw_staging_payload (sidecar)
+    Orchestrates the pipeline: Setup -> Manifest -> Hybrid Ingestion.
+    Returns: load_run_id (str) for downstream validation/logging.
     """
 
-    # --- Stage 0: DB init (creates output/warehouse.db and staging tables) ---
+    # --- Stage 0: Infrastructure Setup ---
+    # Creates SQLite DB and staging tables defined in SQL scripts
     db_path = init_db(root)
-    print(f"✅ Stage 0 complete: DB ready at {db_path}")
+    logger.info("Stage 0: DB initialized at %s", db_path)
 
-    # --- Stage 0b: manifest/lineage for this run ---
+    # --- Stage 0b: Observability & Lineage ---
+    # Generates a run ID and snapshots input file metadata (hashes/counts)
     load_run_id = generate_load_run_id()
-    manifest_path = build_staging_manifest(root, load_run_id=load_run_id, require_non_empty=True)
-    print(f"✅ Manifest written: {manifest_path}")
-    print(f"ℹ load_run_id={load_run_id}")
+    manifest_path = build_staging_manifest(root, load_run_id=load_run_id)
+    logger.info("Stage 0b: Manifest created at %s (RunID: %s)", manifest_path, load_run_id)
 
-    # --- Stage 1: Hybrid ingestion (canonical + payload sidecar) ---
-    # YAML files live under: <repo_root>/mappings/*.yaml
+    # --- Stage 1: Hybrid Ingestion ---
+    # Maps source columns to canonical fields + stores full JSON sidecar
     yaml_dir = root / "mappings"
+    inserted_counts = ingest_stage1_hybrid(root, load_run_id, yaml_dir)
 
-    inserted_counts = ingest_stage1_hybrid(
-        root,
-        load_run_id=load_run_id,
-        yaml_dir=yaml_dir,
-    )
+    total = sum(inserted_counts.values())
+    logger.info("Stage 1: Ingested %s rows total. Breakdown: %s", total, inserted_counts)
 
-    total_inserted = sum(inserted_counts.values())
-    print(f"✅ Stage 1 complete: inserted_rows={total_inserted} per_vendor={inserted_counts}")
+    # --- Stage 2: Cleaning & Normalization - --
+    logger.info("Stage 2: Starting data cleaning and normalization (Silver Layer)...")
+    silver_count = run_stage2_cleaning(root, load_run_id)
+    logger.info("Stage 2: Successfully cleaned and moved %s rows to silver_members.", silver_count)
+
+    return load_run_id # Required for automated post-checks

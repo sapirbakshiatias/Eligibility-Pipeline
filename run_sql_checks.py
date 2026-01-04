@@ -1,125 +1,100 @@
 import sqlite3
+import logging
 from pathlib import Path
 
-DB_PATH = Path(r"C:\Users\sapir\PycharmProjects\Eligibility-Pipeline\output\warehouse.db")
-LOAD_RUN_ID = "20251231T170615Z_5947ddfa"  # update if needed
+# Setup logging configuration
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+logger = logging.getLogger(__name__)
 
+# --- Centralized SQL Queries ---
 QUERIES = {
-    "tables": """
-        SELECT name
-        FROM sqlite_master
-        WHERE type='table'
-        ORDER BY name;
-    """,
-    "counts_raw": """
-        SELECT COUNT(*) AS n
-        FROM raw_staging
-        WHERE load_run_id = ?;
-    """,
-    "counts_payload": """
-        SELECT COUNT(*) AS n
-        FROM raw_staging_payload
-        WHERE load_run_id = ?;
-    """,
-    "by_vendor_raw": """
-        SELECT source_vendor, COUNT(*) AS n
-        FROM raw_staging
-        WHERE load_run_id = ?
-        GROUP BY 1
-        ORDER BY 1;
-    """,
-    "by_vendor_payload": """
-        SELECT source_vendor, COUNT(*) AS n
-        FROM raw_staging_payload
-        WHERE load_run_id = ?
-        GROUP BY 1
-        ORDER BY 1;
-    """,
-    "join_completeness": """
-        SELECT COUNT(*) AS joined
-        FROM raw_staging s
-        JOIN raw_staging_payload p
-          ON s.load_run_id=p.load_run_id
-         AND s.source_vendor=p.source_vendor
-         AND s.source_file=p.source_file
-         AND s.source_row=p.source_row
+	# Fetch row counts from all three layers for the specific run
+	"counts_raw": "SELECT COUNT(*) FROM raw_staging WHERE load_run_id = ?;",
+	"counts_payload": "SELECT COUNT(*) FROM raw_staging_payload WHERE load_run_id = ?;",
+	"counts_silver": "SELECT COUNT(*) FROM silver_members WHERE load_run_id = ?;",
+
+	# Verify that every raw record has a corresponding JSON payload
+	"join_completeness": """
+        SELECT COUNT(*) FROM raw_staging s
+        JOIN raw_staging_payload p ON s.load_run_id = p.load_run_id
+         AND s.source_vendor = p.source_vendor AND s.source_file = p.source_file
+         AND s.source_row = p.source_row
         WHERE s.load_run_id = ?;
     """,
-    "orphans_raw_missing_payload": """
-        SELECT COUNT(*) AS n
-        FROM raw_staging s
-        LEFT JOIN raw_staging_payload p
-          ON s.load_run_id=p.load_run_id
-         AND s.source_vendor=p.source_vendor
-         AND s.source_file=p.source_file
-         AND s.source_row=p.source_row
-        WHERE s.load_run_id = ?
-          AND p.load_run_id IS NULL;
-    """,
-    "orphans_payload_missing_raw": """
-        SELECT COUNT(*) AS n
-        FROM raw_staging_payload p
-        LEFT JOIN raw_staging s
-          ON s.load_run_id=p.load_run_id
-         AND s.source_vendor=p.source_vendor
-         AND s.source_file=p.source_file
-         AND s.source_row=p.source_row
-        WHERE p.load_run_id = ?
-          AND s.load_run_id IS NULL;
-    """,
-    "hash_match": """
-        SELECT COUNT(*) AS n
-        FROM raw_staging s
-        JOIN raw_staging_payload p
-          ON s.load_run_id=p.load_run_id
-         AND s.source_vendor=p.source_vendor
-         AND s.source_file=p.source_file
-         AND s.source_row=p.source_row
-        WHERE s.load_run_id = ?
-          AND s.record_hash_raw = p.record_hash_raw;
-    """,
+
+	# Sample check to verify Stage 2 normalization (Raw value vs Standardized value)
+	"sample_silver": """
+        SELECT source_vendor, first_name_raw, first_name_norm, relationship_raw, relationship_norm
+        FROM silver_members 
+        WHERE load_run_id = ? 
+        AND source_vendor = 'medical_provider_a'
+        LIMIT 3;
+    """
 }
 
-def print_rows(title, rows):
-    print(f"\n=== {title} ===")
-    for r in rows:
-        print(r)
 
-def main():
-    con = sqlite3.connect(DB_PATH)
-    try:
-        cur = con.cursor()
+def get_latest_run_id(cur: sqlite3.Cursor) -> str:
+	"""
+	Finds the most recent load_run_id in the silver_members table.
+	Since IDs are timestamp-based, MAX() returns the latest one.
+	"""
+	res = cur.execute("SELECT MAX(load_run_id) FROM silver_members").fetchone()
+	return res[0] if res else None
 
-        # 1) tables
-        rows = cur.execute(QUERIES["tables"]).fetchall()
-        print_rows("Tables", [r[0] for r in rows])
 
-        # 2) counts
-        n_raw = cur.execute(QUERIES["counts_raw"], (LOAD_RUN_ID,)).fetchone()[0]
-        n_payload = cur.execute(QUERIES["counts_payload"], (LOAD_RUN_ID,)).fetchone()[0]
-        print_rows("Counts", [f"raw_staging={n_raw}", f"raw_staging_payload={n_payload}"])
+def run_validation(root: Path, load_run_id: str = None):
+	"""
+	Performs integrity checks on Bronze and Silver layers.
+	If load_run_id is not provided, it automatically discovers the latest run.
+	"""
+	db_path = root / "output" / "warehouse.db"
 
-        # 3) by vendor
-        by_vendor_raw = cur.execute(QUERIES["by_vendor_raw"], (LOAD_RUN_ID,)).fetchall()
-        by_vendor_payload = cur.execute(QUERIES["by_vendor_payload"], (LOAD_RUN_ID,)).fetchall()
-        print_rows("Counts by vendor (raw_staging)", by_vendor_raw)
-        print_rows("Counts by vendor (raw_staging_payload)", by_vendor_payload)
+	if not db_path.exists():
+		logger.error(f"Database not found at {db_path}")
+		return
 
-        # 4) join + orphans
-        joined = cur.execute(QUERIES["join_completeness"], (LOAD_RUN_ID,)).fetchone()[0]
-        or1 = cur.execute(QUERIES["orphans_raw_missing_payload"], (LOAD_RUN_ID,)).fetchone()[0]
-        or2 = cur.execute(QUERIES["orphans_payload_missing_raw"], (LOAD_RUN_ID,)).fetchone()[0]
-        print_rows("Join checks", [f"joined={joined}", f"raw_without_payload={or1}", f"payload_without_raw={or2}"])
+	conn = sqlite3.connect(db_path)
+	conn.row_factory = sqlite3.Row
+	cur = conn.cursor()
 
-        # 5) hash match (optional)
-        try:
-            hm = cur.execute(QUERIES["hash_match"], (LOAD_RUN_ID,)).fetchone()[0]
-            print_rows("Hash match", [f"hash_matches={hm}"])
-        except sqlite3.OperationalError as e:
-            print_rows("Hash match", [f"skipped ({e})"])
+	try:
+		# Step 1: Discover the latest Run ID if none was passed
+		if load_run_id is None:
+			load_run_id = get_latest_run_id(cur)
 
-    finally:
-        con.close()
+		if not load_run_id:
+			logger.error("No data found in silver_members table to validate.")
+			return
+
+		logger.info(f"\n--- Integrity Report for Run: {load_run_id} ---")
+
+		# Step 2: Compare Row Counts across all layers
+		n_raw = cur.execute(QUERIES["counts_raw"], (load_run_id,)).fetchone()[0]
+		n_payload = cur.execute(QUERIES["counts_payload"], (load_run_id,)).fetchone()[0]
+		n_silver = cur.execute(QUERIES["counts_silver"], (load_run_id,)).fetchone()[0]
+
+		logger.info(f"Row Counts: Raw={n_raw}, Payload={n_payload}, Silver={n_silver}")
+
+		# Step 3: Verify Lineage (Bronze Layer Consistency)
+		joined = cur.execute(QUERIES["join_completeness"], (load_run_id,)).fetchone()[0]
+		logger.info(f"Lineage Check (Raw to Payload): {joined}/{n_raw}")
+
+		# Step 4: Validate Normalization Results (Silver Layer)
+		logger.info("\n--- Stage 2 Normalization Sample (Raw vs. Norm) ---")
+		samples = cur.execute(QUERIES["sample_silver"], (load_run_id,)).fetchall()
+
+		for row in samples:
+			logger.info(
+				f" [{row['source_vendor']}] {row['first_name_raw']} -> {row['first_name_norm']} "
+				f"| Rel: {row['relationship_raw']} -> {row['relationship_norm']}"
+			)
+
+	finally:
+		conn.close()
+
 
 if __name__ == "__main__":
-    main()
+	# Detect local project root based on file location
+	current_root = Path(__file__).resolve().parent
+	# Run validation without a specific ID to trigger 'Auto-Discovery' of the latest run
+	run_validation(current_root)

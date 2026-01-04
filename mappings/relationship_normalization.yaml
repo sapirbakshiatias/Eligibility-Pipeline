@@ -1,0 +1,46 @@
+# mappings/relationship_normalization.yaml
+# Centralized configuration for value mapping and date formats.
+
+# --- Relationship Mappings ---
+# Maps various source values to standard: employee, spouse, dependent
+dental_provider:
+  employee: employee
+  spouse: spouse
+  dependent: dependent
+
+medical_provider_a:
+  emp: employee
+  sps: spouse
+  dep: dependent
+
+medical_provider_b:
+  employee: employee
+  spouse: spouse
+  dependent: dependent
+
+medical_provider_c:
+  e: employee
+  s: spouse
+  d: dependent
+
+vision_provider:
+  e: employee
+  s: spouse
+  d: dependent
+
+# --- Date Formats ---
+# Python strftime formats extracted from vendor source files
+date_formats:
+  dental_provider: "%Y-%m-%d" #
+  medical_provider_a: "%m/%d/%Y" #
+  medical_provider_b: "%Y%m%d" #
+  medical_provider_c: "%Y-%m-%d" #
+  vision_provider: "%d-%b-%Y" #
+
+  # For Medical C, Stage 1 combines year, month, day into YYYY-MM-DD string
+ #   dob_type: "split"
+  #  dob_fields:
+  #    year: "dob_year"
+  #    month: "dob_month"
+   #   day: "dob_day"
+

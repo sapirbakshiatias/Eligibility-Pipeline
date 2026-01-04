@@ -1,33 +1,44 @@
-source_vendor: dental
-file: dental_provider.xlsx
-sheet: eligibility
-format: xlsx
+# --- Metadata ---
+source_vendor: "dental_provider"
+source_file: "dental_provider.xlsx" #
+plan_type: "dental" #
+provider: "Dental Provider Inc"
 
-constants:
-  source_vendor: dental
-  plan_type: dental
-  provider: dental
+# --- File Specs ---
+file_format: "xlsx"
+sheet_name: "eligibility" # Requirement from dictionary
+dob_format: "%Y-%m-%d" # Format is YYYY-MM-DD
 
-mapping:
-  group_id_raw: GroupID
-  subscriber_id_raw: SubscriberID
-  person_id_raw: PersonID
-  first_name_raw: FirstName
-  last_name_raw: LastName
-  dob_raw: DOB
-  relationship_raw: Relation
-  address_line1: Addr1
-  city: City
-  state: State
-  zip: Zip
-  plan_id: DentalPlan
-  plan_tier: Tier
-  is_active_raw: Active
+# --- Column Mapping (Exact Source -> Your Staging Column) ---
+# LEFT (from Excel) : RIGHT (Your Staging Plan)
+column_mapping:
+  GroupID: "group_id_raw"
+  SubscriberID: "subscriber_id_raw"
+  PersonID: "person_id_raw"
+  FirstName: "first_name_raw"
+  LastName: "last_name_raw"
+  DOB: "dob_raw"
+  Addr1: "address_line1"
+  City: "city"
+  State: "state"
+  Zip: "zip"
+  Relation: "relationship_raw"
+  DentalPlan: "plan_id"
+  Tier: "plan_tier"
+  Active: "is_active_raw"
 
-nulls:
-  dependent_seq_raw: null
-  ssn_hash_raw: null
+# --- Internal Fields ---
+# These exist in source but aren't in main staging.
+# They will be moved to extra_payload.
+internal_fields:
+  - "UnusedInternal1"
+  - "UnusedInternal2"
 
-extra_payload:
-  - UnusedInternal1
-  - UnusedInternal2
+# --- Technical Fields (Calculated) ---
+pipeline_columns:
+  - "source_row"
+  - "load_run_id"
+  - "ingested_at"
+  - "source_extract_date"
+  - "record_hash_raw"
+  - "extra_payload" # JSON string of all source columns

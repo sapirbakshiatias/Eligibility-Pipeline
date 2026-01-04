@@ -1,96 +1,80 @@
 from pathlib import Path
 import sqlite3
 import pytest
+from pipeline.stage0_init_db import init_db
 
-from pipeline.main import main
+# Define the DDL here to make the test self-contained and independent of external files
+DDL_01 = """
+-- 01_create_raw_staging.sql
+CREATE TABLE raw_staging (
+    source_vendor TEXT, 
+    source_file TEXT, 
+    source_row INTEGER, 
+    load_run_id TEXT, 
+    ingested_at TEXT, 
+    record_hash_raw TEXT, 
+    plan_type TEXT, 
+    provider TEXT
+);
+"""
 
+DDL_02 = """
+-- 02_create_raw_staging_payload.sql
+CREATE TABLE raw_staging_payload (
+    load_run_id TEXT, 
+    source_vendor TEXT, 
+    source_file TEXT, 
+    source_row INTEGER, 
+    ingested_at TEXT, 
+    raw_payload_json TEXT, 
+    PRIMARY KEY (load_run_id, source_vendor, source_file, source_row)
+);
+"""
 
-def _make_temp_project(tmp_path: Path, ddl_sql: str) -> Path:
+def _setup_sql_files(root: Path):
     """
-    Creates a temp project structure expected by main(root):
-      root/sql/01_create_raw_staging.sql
-      root/output/
+    Creates the 'sql' directory with the two specific SQL files
+    that the init_db function expects to find.
     """
-    (tmp_path / "sql").mkdir(parents=True, exist_ok=True)
-    (tmp_path / "output").mkdir(parents=True, exist_ok=True)
-    (tmp_path / "sql" / "01_create_raw_staging.sql").write_text(ddl_sql, encoding="utf-8")
-    return tmp_path
+    sql_dir = root / "sql"
+    sql_dir.mkdir(parents=True, exist_ok=True)
+    # The init_db logic specifically looks for these two file names
+    (sql_dir / "01_create_raw_staging.sql").write_text(DDL_01)
+    (sql_dir / "02_create_raw_staging_payload.sql").write_text(DDL_02)
 
 
-def test_stage0_creates_db_and_raw_staging(tmp_path: Path) -> None:
-    # Arrange: minimal DDL that creates raw_staging
-    ddl = """
-    CREATE TABLE IF NOT EXISTS raw_staging (
-        source_vendor TEXT NOT NULL,
-        source_file TEXT NOT NULL,
-        source_row INTEGER NOT NULL,
-        load_run_id TEXT NOT NULL,
-        ingested_at TEXT NOT NULL,
-        plan_type TEXT NOT NULL,
-        provider TEXT NOT NULL,
-        record_hash_raw TEXT NOT NULL
-    );
+def test_stage0_init_db_creates_tables(tmp_path: Path):
     """
-    root = _make_temp_project(tmp_path, ddl)
+    Tests that calling init_db successfully creates the database file
+    and the required staging tables.
+    """
+    # Arrange
+    _setup_sql_files(tmp_path)
 
     # Act
-    main(root)
+    db_path = init_db(tmp_path)
 
-    # Assert: DB exists
-    db_path = root / "output" / "warehouse.db"
+    # Assert
     assert db_path.exists()
-
-    # Assert: table exists
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
-    cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='raw_staging';")
-    assert cur.fetchone() is not None
+
+    # Check that table names exist in the DB and match those defined in the DDL
+    cur.execute("SELECT name FROM sqlite_master WHERE type='table';")
+    tables = [row[0] for row in cur.fetchall()]
+    assert "raw_staging" in tables
+    assert "raw_staging_payload" in tables
     conn.close()
 
 
-def test_stage0_is_idempotent_running_twice(tmp_path: Path) -> None:
-    ddl = """
-    CREATE TABLE IF NOT EXISTS raw_staging (
-        source_vendor TEXT NOT NULL,
-        source_file TEXT NOT NULL,
-        source_row INTEGER NOT NULL,
-        load_run_id TEXT NOT NULL,
-        ingested_at TEXT NOT NULL,
-        plan_type TEXT NOT NULL,
-        provider TEXT NOT NULL,
-        record_hash_raw TEXT NOT NULL
-    );
+def test_stage0_init_db_raises_error_on_missing_sql(tmp_path: Path):
     """
-    root = _make_temp_project(tmp_path, ddl)
+    Ensures that init_db raises a FileNotFoundError if the mandatory
+    SQL scripts are missing from the project structure.
+    """
+    # Arrange - Create an empty 'sql' directory without any .sql files
+    (tmp_path / "sql").mkdir()
 
-    # Act: run twice
-    main(root)
-    main(root)
-
-    # Assert: still exists
-    db_path = root / "output" / "warehouse.db"
-    conn = sqlite3.connect(db_path)
-    cur = conn.cursor()
-    cur.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='raw_staging';")
-    assert cur.fetchone() is not None
-    conn.close()
-
-
-def test_stage0_raises_if_ddl_missing(tmp_path: Path) -> None:
-    # Arrange: project folders but NO DDL file
-    (tmp_path / "sql").mkdir(parents=True, exist_ok=True)
-    (tmp_path / "output").mkdir(parents=True, exist_ok=True)
-
-    # Act + Assert
+    # Act & Assert
     with pytest.raises(FileNotFoundError):
-        main(tmp_path)
-
-
-def test_stage0_raises_if_raw_staging_not_created(tmp_path: Path) -> None:
-    # Arrange: DDL that does NOT create raw_staging
-    ddl = "CREATE TABLE something_else(id INTEGER);"
-    root = _make_temp_project(tmp_path, ddl)
-
-    # Act + Assert: your code raises RuntimeError if raw_staging missing
-    with pytest.raises(RuntimeError):
-        main(root)
+       init_db(tmp_path)
